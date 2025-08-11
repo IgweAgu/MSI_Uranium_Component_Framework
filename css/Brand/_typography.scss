@@ -1,0 +1,68 @@
+.font-huge {
+	font-family: 'HUGEAvantGardeBold', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-weight: normal;
+}
+
+.font-galaxie {
+	font-family: 'Galaxie', Helvetica, Roboto, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-weight: normal;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.font-xl { // was h1
+	font-size: 100px;
+  font-size: 6.25em;
+  line-height: 1.35;
+  word-break: break-all;
+	//line-height: 120px;
+}
+
+.font-lg { // was h2
+	font-size: 80px;
+  font-size: 5em;
+  line-height: 1.35;
+  word-break: break-all;
+	//line-height: 92px;
+}
+
+.font-md {
+	font-size: 38px;
+  font-size: 2.375em;
+	line-height: 1.1;
+}
+
+.p1, .p2 {
+	padding-right: 20%;
+}
+
+.p3 {
+	font-size: 15px;
+  font-size: .938em;
+	line-height: 1.8;
+	color: #666;
+	margin-top: 3em;
+}
+
+#typography {
+  h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+  }
+  p {
+  	font: 16px/2 "Galaxie";
+  	margin: 2em 0;
+  }
+}
+
+// this keeps the brand font from messing with the UI
+.sg-content {
+  line-height: 24px;
+  font: 16px/2 'Galaxie', Geneva, Helvetica, Arial, sans-serif;
+  color: #333;
+}

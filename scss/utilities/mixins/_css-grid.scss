@@ -1,0 +1,105 @@
+// CSS Grid Layout
+
+@mixin grid {
+  @include flex;
+  @include flex-wrap;
+  //@include pb-2;
+  //@include mw-100p;
+  > * {
+    @include flex-grow-1;
+    @include p-1;
+    flex-basis: 15em;
+  }
+  @supports (grid-gap: 0) {
+    display: grid;
+    grid-gap: 2em;
+    > * {
+      @include p-0;
+    }
+    @media (min-width: $break-640) {
+      grid-template-columns: repeat(auto-fit, minmax(10.5em, 1fr));  
+    }
+  }
+
+}
+
+@mixin grid-2-col {
+  @include grid;
+  @supports (grid-gap: 0) {
+    @media (min-width: $break-640) {
+      grid-gap: 2em 3em;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@mixin grid-lg {
+  @include grid-2-col;
+  @media (min-width: $break-640) {
+    grid-gap: 5em 0;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: $break-768) {
+    grid-gap: 0 5em;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@mixin grid-4-col {
+  @include grid;
+  @supports (grid-gap: 0) {
+    grid-template-columns: repeat(auto-fit, minmax(16.5em, 1fr));
+    grid-gap: 2em;
+    // 2 cols @ 900 ~ 1360
+    @media (min-width: 60em) and (max-width: 85em) {
+      grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    }
+  }
+}
+
+@mixin grid-banner {
+  @media (max-width: $break-900) {
+    > .container {
+      @include p-2;
+    }
+  }
+  @media (min-width: $break-900) {
+    .grid-wrap {
+      @include grid;
+      grid-template-rows: minmax(50vh, 1fr);
+      > * {
+        display: flex;
+      }
+    }
+  }
+}
+
+@mixin grid-gap-0 {
+  @supports (grid-gap: 0) {
+    grid-gap: 0 !important;
+  }
+}
+
+.grid {
+  @include grid;
+}
+
+.grid-2-col {
+  @include grid-2-col;
+}
+
+.grid-4-col {
+  @include grid-4-col;
+}
+
+.grid-lg {
+  @include grid-lg;
+}
+
+.grid-banner {
+  @include grid-banner;
+}
+
+.grid-flush {
+  @include grid-gap-0;
+}

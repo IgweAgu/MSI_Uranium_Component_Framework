@@ -1,0 +1,2648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>URANIUM - V1.0</title>
+<link rel="stylesheet" href="css/styleguide.processed.css">
+<link rel="stylesheet" href="css/Brand/styles.processed.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+ <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+</head>
+
+<body><svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="icon-resize" viewBox="0 0 32 32"><title>resize</title><path d="M23.977 28.965v-1.932h3.988v-3.988h2.057v5.92h-6.045zM27.965 5.967h-3.988v-1.932h6.045v5.92h-2.057v-3.988zM3.035 9.955h-2.056v-5.92h6.045v1.932h-3.989v3.988zM4.967 8.023h21.066v16.953h-21.066v-16.953zM7.023 23.045h16.953v-13.090h-16.953v13.090zM9.018 12.012h13.027v8.977h-13.027v-8.977zM3.035 27.033h3.988v1.932h-6.044v-5.92h2.057v3.988z"></path></symbol><symbol id="icon-photo_size_select_small" viewBox="0 0 24 24"><title>photo_size_select_small</title><path d="M6.984 3v2.016h-1.969v-2.016h1.969zM11.016 3v2.016h-2.016v-2.016h2.016zM3 11.016v1.969h-2.016v-1.969h2.016zM3 3v2.016h-2.016c0-0.984 1.031-2.016 2.016-2.016zM18.984 18.984v2.016h-1.969v-2.016h1.969zM18.984 3v2.016h-1.969v-2.016h1.969zM15 18.984v2.016h-2.016v-2.016h2.016zM3 6.984v2.016h-2.016v-2.016h2.016zM3 21c-1.078 0-2.016-0.938-2.016-2.016v-3.984h10.031v6h-8.016zM21 3c0.984 0 2.016 1.031 2.016 2.016h-2.016v-2.016zM23.016 6.984v2.016h-2.016v-2.016h2.016zM15 3v2.016h-2.016v-2.016h2.016zM23.016 18.984c0 0.984-1.031 2.016-2.016 2.016v-2.016h2.016zM23.016 11.016v1.969h-2.016v-1.969h2.016zM23.016 15v2.016h-2.016v-2.016h2.016z"></path></symbol><!-- resize icon--><symbol id="icon-resize-full-screen" viewBox="0 0 20 20" aria-labelledby="fullscreen-title fullscreen-desc"><title id="fullscreen-title">resize-full-screen</title><desc id="fullscreen-desc">View content in full screen mode</desc><path d="M6.987 10.987l-2.931 3.031-2.056-2.429v6.411h6.387l-2.43-2.081 3.030-2.932-2-2zM11.613 2l2.43 2.081-3.030 2.932 2 2 2.931-3.031 2.056 2.429v-6.411h-6.387z"></path><!-- mobile icon--><symbol id="icon-mobile" viewBox="0 0 20 20" aria-labelledby="mobile-title mobile-desc"><title id="mobile-title">mobile phone</title><desc id="mobile-desc">View content in small screen mode</desc><path d="M14.004 0h-8.008c-1.102 0-1.996 0.894-1.996 1.996v16.007c0 1.103 0.894 1.997 1.996 1.997h8.007c1.103 0 1.997-0.894 1.997-1.996v-16.008c0-1.102-0.894-1.996-1.996-1.996zM10 19c-0.69 0-1.25-0.447-1.25-1s0.56-1 1.25-1 1.25 0.447 1.25 1-0.56 1-1.25 1zM14 16h-8v-14h8v14z"></path></symbol><!-- tablet icon--><symbol id="icon-tablet" viewBox="0 0 20 20" aria-labelledby="tablet-mobile tablet-desc"><title id="tablet-title">tablet</title><desc id="tablet-desc">View content in medium screen mode</desc><path d="M16 0h-12c-1.1 0-2 0.899-2 2v16c0 1.1 0.9 2 2 2h12c1.101 0 2-0.9 2-2v-16c0-1.101-0.899-2-2-2zM10 19c-0.69 0-1.25-0.447-1.25-1s0.56-1 1.25-1c0.689 0 1.25 0.447 1.25 1s-0.561 1-1.25 1zM16 16h-12v-14h12v14z"></path></symbol><!-- display icon--><symbol id="icon-display" viewBox="0 0 20 20" aria-labelledby="display-title display-desc"><title id="display-title">computer display</title><desc id="display-desc">View content in large screen mode</desc><path d="M0 1.25v12.5h20v-12.5h-20zM18.75 12.5h-17.5v-10h17.5v10zM13.125 15h-6.25l-0.625 2.5-1.25 1.25h10l-1.25-1.25z"></path></symbol></symbol></svg>
+  <div
+    class="site-wrap">
+    <!-- nav-->
+    <nav class="sg-sidebar sg-sidebar-img" id="sg-sidebar" aria-label="sidebar" data-scroll-header hidden style=" background-repeat: no-repeat;/*background-image: url(images/side-bg.png)*/;background-size: contain; background-position-y: 20em;">
+      <ul class="sg-sidebar-nav" id="sg-sidebar-nav">
+        <div class="motologo">
+        <img src="" width="150" style="margin:13px; margin-left:auto; margin-top:33px;"></div>
+        <div class="logo"><img src="images/uranium_logo.png" width="290px"></div>
+        <li class="sg-brand mb-1-pt5 text-center">
+       <div class="beta" style="background-color: #011b2c;font-size: 12px;padding: 9px;border-radius: 10px;margin-top: 10px;">Uranium BETA Ver 1.0</div>
+          <!-- change the font to match YOUR brand-->
+        </li>
+        <li><a class="nav-toggle" href="#gettingstarted" role="button" data-scroll>Getting Started <!--<span class="caret" aria-hidden="true">▹</span>--><!--ul.sub-menu(hidden)li
+  a(href="#introduction" data-scroll)--></a></li>
+         <li><a href="#colors" data-scroll>Colors</a></li>
+         <li><a href="#bars" data-scroll>Bars</a></li>
+        <li><a href="#buttons" data-scroll>Buttons</a></li>
+          <li><a href="#pills" data-scroll>Pills</a></li>
+         <li><a href="#modals" data-scroll>Modals</a></li>
+        <li><a href="#cards" data-scroll>Cards</a></li>
+         <li><a href="#accordion" data-scroll>Accordion</a></li>
+      </ul>
+    </nav>
+    <main class="sg-main" id="main" role="main">
+      <!-- header-->
+      <div class="sg-header" role="banner"><a class="toggle-button" id="menu-toggle" href="#sg-sidebar" data-text-original="☰" data-text-swap="✕" role="button" aria-label="open-main-menu" aria-expanded="false">☰</a>
+        <div class="option-select">
+          <p class="mb-0">Developed By: Morris Onwuatuegwu</p>
+          <div class="dropdown"><button class="dropdown-toggle" id="resize-toggle" aria-expanded="false"><svg class="icon icon-resize"><use xlink:href="#icon-resize"></use></svg></button>
+            <ul class="toggle-list" hidden>
+              <li><button id="toggle-sm" aria-label="view-content-in-small-screen-mode"><svg class="icon icon-mobile"><use xlink:href="#icon-mobile"></use></svg><span aria-hidden="true">SM</span></button></li>
+              <li class="md"><button id="toggle-md" aria-label="view-content-in-medium-screen-mode"><svg class="icon icon-tablet"><use xlink:href="#icon-tablet"></use></svg><span aria-hidden="true">MD</span></button></li>
+              <li class="lg"><button id="toggle-lg" aria-label="view-content-in-large-screen-mode"><svg class="icon icon-display"><use xlink:href="#icon-display"></use></svg><span aria-hidden="true">LG</span></button></li>
+              <!--li.xlbutton#toggle-xl(aria-label="view-content-in-large-screen-mode")
+  svg.icon.icon-display <use xlink:href="#icon-display"></use>
+  span(aria-hidden="true") XL-->
+              <li><button class="jc-center active" id="toggle-full" aria-label="view-content-in-fullscreen-mode"><svg class="icon icon-resize-full-screen"><use xlink:href="#icon-resize-full-screen"></use></svg><span aria-hidden="true">XL</span></button></li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+      <!-- content-->
+      <div class="sg-content">
+        <div class="sg-content-wrap">
+          <!-- Introduction-->
+        <section class="sg-module" id="gettingstarted" style="background-color: #021c2c;color: white;">
+            <h2 class="style-title">Introduction</h2>
+            <p class="huge-module__paragraph">
+Uranium is a unique design system introduced for Orchestrate (ConnectX). A web application used for 
+law enforcement professionals and public safety men and women. The system was designed with UX (User Experience) as the primary focus.</p>
+<br>
+       <p class="huge-module__paragraph">With a fast, rapid and fluid UI (User Interface) methodology incorporated for adaptive multi-functional platforms such as web, mobile and tablet.
+   Uranium is created with a more steam-line approach to front-end development and pre-existing technologies such as HTML5 & Angular.</p>
+   <br>
+               <p class="huge-module__paragraph">At its core, it values scalability and user-driven actions to accommodate API predictability and support backend architecture with a constant response to web integrations. View how orchestrate uses uranium to create a responsive & dynamic user-driven and state management UI</p>
+               
+               <center>
+               <br>
+               <a href="Orchestrate_Prototype_Ver_1.1/index.html"><button class="btn-lg btn-blue">Orchestrate Prototype</button></a>
+                 <button class="btn-lg btn-black-primary">Download Uranium Ver 1.1</button>
+               </center>    
+          </section>
+          
+<!--Colors-->
+<section class="sg-module" id="colors">
+<h2 class="style-title">Colors</h2>
+<ul class="color-list">
+<li class="color-box blue"><div class="color-number">#0B6392</div></li>
+<li class="color-box blue2"><div class="color-number">#021D30</div></li>
+<li class="color-box blue3"><div class="color-number">#021c2c</div></li>
+<li class="color-box blue4"><div class="color-number">#04141e</div></li>
+<li class="color-box white"><div class="color-number">#FFFFFF</div></li>
+<li class="color-box white2"><div class="color-number">#FAFAF8</div></li>
+<li class="color-box black"><div class="color-number">#171616</div></li>
+<li class="color-box black1"><div class="color-number">#232323</div></li>
+<li class="color-box black2"><div class="color-number">#0e0c0c</div></li>
+<li class="color-box black3"><div class="color-number">#0a0a0a</div></li>
+<li class="color-box red"><div class="color-number">#9D0008</div></li>
+<li class="color-box red1"><div class="color-number">#5E0D17</div></li>
+   
+</section> 
+
+<style>
+
+#colors ul {
+display: -ms-grid;
+display: grid;
+grid-gap: .5rem;
+-ms-grid-columns: (minmax(14em, 1fr))[auto-fit];
+grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+}
+
+.color-number{
+ background-color: rgba(250, 235, 215, 0.16);
+margin-top: 69px;
+border-bottom-left-radius: 7px;
+border-bottom-right-radius: 7px;
+}
+
+.color-box {
+display: inline-block;
+height: 100px;
+margin: 5px;
+padding: 20px;
+text-align: center;
+vertical-align: top;
+width: 100px;
+border-radius: 5px;
+}
+
+&:before, &:after {
+display: block;
+	}
+}
+
+#colors li{
+ width:;
+ }
+.blue{
+ background-color:#0B6392;}
+ .blue2{
+ background-color:#021D30;}
+ .blue3{
+ background-color:#021c2c;}
+ .blue4{
+ background-color:#04141e;
+ border: 1px solid #072a40;}
+ .white{
+ background-color:#FFFFFF;
+ color:#000;}
+ .white2{
+ background-color:#FAFAF8;
+ color:#000;}
+ .black{
+ background-color:#171616;}
+ .black1{
+ background-color:#232323;}
+ .black2{
+ background-color:#0e0c0c;}
+ .black3{
+ background-color:#0a0a0a;}
+ .red{
+ background-color:#9D0008;}
+ .red1{
+ background-color:#5E0D17;}
+</style>
+          <!--End Colors-->       
+
+          <!--Bars-->
+            <section class="sg-module" id="bars">
+            <h2 class="style-title">Nav & Menu Bars </h2>
+
+<p class="huge-module__paragraph">Choose between either Horizontal or Vertical navigation bar. Get started by starting a new document (see below or customize your own.)</p>
+
+<style>
+.ic-module-example{
+padding: inherit;
+border: aliceblue;
+margin-left: -4em;
+width: 1000px;
+ }
+</style>
+
+            
+		
+    <h5>Vertical</h5>
+<iframe width="1000px" height="250px" class="ic-module-example" src="vertical-nav.html"></iframe>
+          
+        <pre class="syntax">&lt;nav id=&quot;navbar&quot;&gt;
+  &lt;ul class=&quot;navbar-items flexbox-col&quot;&gt;
+    &lt;li class=&quot;navbar-logo flexbox-left&quot;&gt;
+      &lt;a class=&quot;navbar-item-inner flexbox&quot;&gt;
+       &lt;div class=&quot;moto-logo&quot;&gt;&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;navbar-item flexbox-left&quot;&gt;
+      &lt;a class=&quot;navbar-item-inner flexbox-left&quot;&gt;
+        &lt;div class=&quot;navbar-item-inner-icon-wrapper flexbox&quot;&gt;
+          &lt;ion-icon name=&quot;home-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/div&gt;
+        &lt;span class=&quot;link-text&quot;&gt;Home&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;</pre>
+       
+         
+     
+<br>
+<br>
+<!---Tabs---->
+  <h2 class="style-title">Bars</h2>
+
+
+<h5>Bar 1</h5>
+<div class="placement" style="width:1000px;">
+<header class="header navblue">
+	<div class="header-content responsive-wrapper">
+		<div class="header-logo">
+			<a href="#">
+			</a>
+		</div>
+		<div class="header-navigation">
+			<nav class="header-navigation-links">
+				<a href="#">Menu</a>
+				<a href="#">Menu</a>
+				<a href="#">Menu</a>
+				<a href="#">Menu</a>
+			</nav>
+			<div class="header-navigation-actions">
+				<!--CONNECTX DEV place any action here-->
+				<a href="#" class="icon-button">
+					<i class="ph-bell-bold"></i>
+				</a>
+				<a href="#" class="icon-button">
+					<i class="ph-gear-bold"></i>
+				</a>
+				<a href="#" class="avatar1">
+					<img src="images/avatar.png" alt="" />
+				</a>
+			</div>
+		</div>
+		<a href="#" class="menu-button">
+			<i class="ph-list-bold"></i>
+			<span>Menu</span>
+		</a>
+	</div>
+</header>
+</div>
+<br>
+
+ <pre class="syntax" style="600px">&lt;header class=&quot;header navblue&quot;&gt;
+	&lt;div class=&quot;header-content responsive-wrapper&quot;&gt;
+		&lt;div class=&quot;header-logo&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;header-navigation&quot;&gt;
+			&lt;nav class=&quot;header-navigation-links&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+			&lt;/nav&gt;
+			&lt;div class=&quot;header-navigation-actions&quot;&gt;
+				&lt;!--CONNECTX DEV place any action here--&gt;
+				&lt;a href=&quot;#&quot; class=&quot;icon-button&quot;&gt;
+					&lt;i class=&quot;ph-bell-bold&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;icon-button&quot;&gt;
+					&lt;i class=&quot;ph-gear-bold&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;avatar1&quot;&gt;
+					&lt;img src=&quot;images/avatar.png&quot; alt=&quot;&quot; /&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;a href=&quot;#&quot; class=&quot;menu-button&quot;&gt;
+			&lt;i class=&quot;ph-list-bold&quot;&gt;&lt;/i&gt;
+			&lt;span&gt;Menu&lt;/span&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</pre>
+<br>
+
+
+<h5>Bar 2</h5>
+<div class="placement" style="width:1000px;">
+<header class="header navdark">
+	<div class="header-content responsive-wrapper">
+		<div class="header-logo">
+			<a href="#">
+			</a>
+		</div>
+		<div class="header-navigation">
+			<nav class="header-navigation-links">
+				<a href="#">Menu</a>
+				<a href="#">Menu</a>
+				<a href="#">Menu</a>
+				<a href="#">Menu</a>
+			</nav>
+			<div class="header-navigation-actions">
+				<!--CONNECTX DEV place any action here-->
+				<a href="#" class="icon-button">
+					<i class="ph-bell-bold"></i>
+				</a>
+				<a href="#" class="icon-button">
+					<i class="ph-gear-bold"></i>
+				</a>
+				<a href="#" class="avatar1">
+					<img src="images/avatar.png" alt="" />
+				</a>
+			</div>
+		</div>
+		<a href="#" class="menu-button">
+			<i class="ph-list-bold"></i>
+			<span>Menu</span>
+		</a>
+	</div>
+</header>
+</div>
+<br>
+
+ <pre class="syntax" style="600px">&lt;header class=&quot;header navdark&quot;&gt;
+	&lt;div class=&quot;header-content responsive-wrapper&quot;&gt;
+		&lt;div class=&quot;header-logo&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;header-navigation&quot;&gt;
+			&lt;nav class=&quot;header-navigation-links&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+			&lt;/nav&gt;
+			&lt;div class=&quot;header-navigation-actions&quot;&gt;
+				&lt;!--CONNECTX DEV place any action here--&gt;
+				&lt;a href=&quot;#&quot; class=&quot;icon-button&quot;&gt;
+					&lt;i class=&quot;ph-bell-bold&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;icon-button&quot;&gt;
+					&lt;i class=&quot;ph-gear-bold&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;avatar1&quot;&gt;
+					&lt;img src=&quot;images/avatar.png&quot; alt=&quot;&quot; /&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;a href=&quot;#&quot; class=&quot;menu-button&quot;&gt;
+			&lt;i class=&quot;ph-list-bold&quot;&gt;&lt;/i&gt;
+			&lt;span&gt;Menu&lt;/span&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</pre>
+<br>
+
+<h5>Bar 3</h5>
+<div class="placement" style="width:1000px;">
+<header class="header navgrey">
+	<div class="header-content responsive-wrapper">
+		<div class="header-navigation">
+					<div class="container">
+				<div id="material-tabs">
+						<a id="tab1-tab" href="#tab1" class="active">Menu</a>
+						<a id="tab2-tab" href="#tab2">Menu</a>
+						<span class="yellow-bar"></span>
+				</div>
+				</div>
+			    <div class="header-navigation-actions">
+				<!--CONNECTX DEV place any action here-->
+				<a href="#" class="icon-button" style="color:#0b6392;">
+					<i class="ph-bell-bold"></i>
+				</a>
+				<a href="#" class="icon-button" style="color:#0b6392;">
+					<i class="ph-gear-bold"></i>
+				</a>
+				<a href="#" class="avatar1">
+					<img src="images/avatar.png" alt="" />
+				</a>
+			</div>
+		</div>
+		<a href="#" class="menu-button">
+			<i class="ph-list-bold"></i>
+			<span>Menu</span>
+		</a>
+	</div>
+</header>
+</div>
+<br>
+
+ <pre class="syntax" style="600px">
+ &lt;header class=&quot;header navgrey&quot;&gt;
+	&lt;div class=&quot;header-content responsive-wrapper&quot;&gt;
+		&lt;div class=&quot;header-navigation&quot;&gt;
+					&lt;div class=&quot;container&quot;&gt;
+				&lt;div id=&quot;material-tabs&quot;&gt;
+						&lt;a id=&quot;tab1-tab&quot; href=&quot;#tab1&quot; class=&quot;active&quot;&gt;Menu&lt;/a&gt;
+						&lt;a id=&quot;tab2-tab&quot; href=&quot;#tab2&quot;&gt;Menu&lt;/a&gt;
+						&lt;span class=&quot;yellow-bar&quot;&gt;&lt;/span&gt;
+				&lt;/div&gt;
+				&lt;/div&gt;
+			    &lt;div class=&quot;header-navigation-actions&quot;&gt;
+				&lt;!--CONNECTX DEV place any action here--&gt;
+				&lt;a href=&quot;#&quot; class=&quot;icon-button&quot; style=&quot;color:#0b6392;&quot;&gt;
+					&lt;i class=&quot;ph-bell-bold&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;icon-button&quot; style=&quot;color:#0b6392;&quot;&gt;
+					&lt;i class=&quot;ph-gear-bold&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;avatar1&quot;&gt;
+					&lt;img src=&quot;images/avatar.png&quot; alt=&quot;&quot; /&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;a href=&quot;#&quot; class=&quot;menu-button&quot;&gt;
+			&lt;i class=&quot;ph-list-bold&quot;&gt;&lt;/i&gt;
+			&lt;span&gt;Menu&lt;/span&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/header&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;header-navigation&quot;&gt;
+			&lt;nav class=&quot;header-navigation-links&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;
+			&lt;/nav&gt;
+			&lt;div class=&quot;header-navigation-actions&quot;&gt;
+				&lt;!--CONNECTX DEV place any action here--&gt;
+				&lt;a href=&quot;#&quot; class=&quot;icon-button&quot;&gt;
+					&lt;i class=&quot;ph-bell-bold&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;icon-button&quot;&gt;
+					&lt;i class=&quot;ph-gear-bold&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;avatar1&quot;&gt;
+					&lt;img src=&quot;images/avatar.png&quot; alt=&quot;&quot; /&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;a href=&quot;#&quot; class=&quot;menu-button&quot;&gt;
+			&lt;i class=&quot;ph-list-bold&quot;&gt;&lt;/i&gt;
+			&lt;span&gt;Menu&lt;/span&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</pre>
+	
+  
+ <script>
+$(document).ready(function() {
+		$('#material-tabs').each(function() {
+
+				var $active, $content, $links = $(this).find('a');
+
+				$active = $($links[0]);
+				$active.addClass('active');
+
+				$content = $($active[0].hash);
+
+				$links.not($active).each(function() {
+						$(this.hash).hide();
+				});
+
+				$(this).on('click', 'a', function(e) {
+
+						$active.removeClass('active');
+						$content.hide();
+
+						$active = $(this);
+						$content = $(this.hash);
+
+						$active.addClass('active');
+						$content.show();
+
+						e.preventDefault();
+				});
+		});
+});
+</script> 
+
+
+
+
+
+
+<!-- Main -->
+
+<!-- partial -->
+
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus {
+  outline: 0;
+}
+
+.responsive-wrapper {
+  width: 90%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navblue{
+ background-color: #0b6392;
+ 
+}
+
+.navdark{
+ background-color: #1A1A1A;
+ 
+}
+
+.navgrey, .navgrey-blue-text{
+ background-color: #F5F5F5;
+ 
+}
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid var(--c-border-primary);
+ 
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+.header-content > a {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .header-content {
+    justify-content: space-between;
+  }
+  .header-content > a {
+    display: inline-flex;
+  }
+}
+
+.header-logo{
+ background-image:url(images/logo.png);
+ background-size:cover;
+ height:50px;
+ width:50px;
+ }
+
+
+.header-logo {
+  margin-right: 2.5rem;
+  margin-left:-40px;
+}
+.header-logo a {
+  display: flex;
+  align-items: center;
+}
+.header-logo a div {
+  flex-shrink: 0;
+  position: relative;
+}
+.header-logo a div:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  height: 50%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.header-navigation {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .header-navigation {
+    display: none;
+  }
+}
+
+.header-navigation-links {
+  display: flex;
+  align-items: center;
+}
+.header-navigation-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.15s ease;
+}
+.header-navigation-links a + * {
+  margin-left: 1.5rem;
+}
+.header-navigation-links a:hover, .header-navigation-links a:focus {
+  color: #fff;
+}
+
+.header-navigation-actions {
+  display: flex;
+  align-items: center;
+}
+.header-navigation-actions > .avatar {
+  margin-left: 0.75rem;
+}
+.header-navigation-actions > .icon-button + .icon-button {
+  margin-left: 0.25rem;
+}
+.header-navigation-actions > .button + .icon-button {
+  margin-left: 1rem;
+}
+
+.menu-button {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+  height: 40px;
+  border-radius: 8px;
+  line-height: 1;
+  /*border: 2px solid #fff;*/
+  color: #fff;
+  font-size: 0.875rem;
+  transition: 0.15s ease;
+  background-color: #003755;
+  box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+}
+.menu-button i {
+  margin-right: 0.5rem;
+  font-size: 1.25em;
+}
+.menu-button span {
+  font-weight: 500;
+}
+.menu-button:hover, .button:focus {
+  border-color: #fff;
+  color: #fff;
+}
+
+
+.icon-button {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: #fff;
+  transition: 0.15s ease;
+}
+.icon-button i {
+  font-size: 1.25em;
+}
+.icon-button:focus, .icon-button:hover {
+  background-color: #003755;
+  color: #fff;
+}
+
+.avatar1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 33px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+}
+
+.avatar2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 33px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+}
+
+
+
+.main {
+  padding-top: 3rem;
+}
+
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media (max-width: 550px) {
+  .main-header h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.tab-content {
+		padding:25px;
+		margin-left:auto;
+}
+
+#material-tabs {
+		position: relative;
+		display: block;
+	    padding:0;
+		margin-left: 2rem;
+		margin-top:0.6em;
+}
+
+#material-tabs>a {
+		position: relative;
+	 display:inline-block;
+		text-decoration: none;
+		padding: 22px;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 600;
+		color: #424f5a;
+		text-align: center;
+		outline:;
+}
+
+#material-tabs>a.active {
+		font-weight: 700;
+		outline:none;
+}
+
+#material-tabs>a:not(.active):hover {
+		background-color: inherit;
+		color: #7c848a;
+}
+
+@media only screen and (max-width: 520px) {
+		.nav-tabs#material-tabs>li>a {
+				font-size: 11px;
+		}
+}
+
+.yellow-bar {
+		position: absolute;
+		z-index: 10;
+		bottom: 0;
+		height: 3px;
+		background: #458CFF;
+		display: block;
+		left: 0;
+		transition: left .2s ease;
+		-webkit-transition: left .2s ease;
+}
+
+#tab1-tab.active ~ span.yellow-bar {
+		left: 0;
+		width: 126px;
+}
+
+#tab2-tab.active ~ span.yellow-bar {
+		left:119px;
+		width: 126px;
+}
+
+#tab3-tab.active ~ span.yellow-bar {
+		left: 253px;
+		width: 135px;
+}
+
+#tab4-tab.active ~ span.yellow-bar {
+		left:392px;
+		width: 163px;
+}
+
+
+</style>
+    
+
+        
+
+</section>
+
+
+
+
+            <!---BUTTONS--->
+          
+<section class="sg-module" id="buttons" style="background-color: #04141e; color:#fff;">
+<h2 class="style-title">Buttons</h2>
+  <p class="huge-module__paragraph">Choose button styles by size and nature.</p>
+<h5> Xtra Small Button </h5>
+<button class="btn-xm btn-blue">Button</button>
+<button class="btn-xm btn-white">Button</button>
+<button class="btn-xm btn-cancel">Cancel</button>
+<button class="btn-xm btn-black-primary">Button</button>
+<button class="btn-xm btn-black-secondary">Button</button>
+<button class="btn-xm btn-dark-cancel">Cancel</button>
+<br>
+<br>
+<pre class="syntax">
+&lt;button class=&quot;btn-xm btn-blue&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-xm btn-white&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-xm btn-cancel&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-xm btn-black-primary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-xm btn-black-secondary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-xm btn-dark-cancel&quot;&gt;Button&lt;/button&gt;</pre>
+
+<br>
+
+<h5> Small Buttons </h5>
+<button class="btn-sm btn-blue">Button</button>
+<button class="btn-sm btn-white">Button</button>
+<button class="btn-sm btn-cancel">Cancel</button>
+<button class="btn-sm btn-black-primary">Button</button>
+<button class="btn-sm btn-black-secondary">Button</button>
+<button class="btn-sm btn-dark-cancel">Cancel</button>
+<br>
+<br>
+<pre class="syntax"">
+&lt;button class=&quot;btn-sm btn-blue&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-sm btn-white&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-sm btn-cancel&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-sm btn-black-primary&quot;&gt;Button&lt;/button&gt
+&lt;button class=&quot;btn-sm btn-black-secondary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-sm btn-dark-cancel&quot;&gt;Button&lt;/button&gt;</pre>
+
+<br>
+
+<h5> Regular Buttons </h5>
+<button class="btn btn-blue">Button</button>
+<button class="btn btn-white">Button</button>
+<button class="btn btn-cancel">Cancel</button>
+<button class="btn btn-black-primary">Button</button>
+<button class="btn btn-black-secondary">Button</button>
+<button class="btn btn-dark-cancel">Cancel</button>
+<br>
+<br>
+<pre class="syntax">
+&lt;button class=&quot;btn btn-blue&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn btn-white&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn btn-cancel&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn btn-black-primary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn btn-black-secondary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn btn-dark-cancel&quot;&gt;Button&lt;/button&gt;</pre>
+
+<br>
+<h5> Large Buttons </h5>
+<button class="btn-lg btn-blue">Button</button>
+<button class="btn-lg btn-white">Button</button>
+<button class="btn-lg btn-cancel">Cancel</button>
+<br>
+<br>
+<button class="btn-lg btn-black-primary">Button</button>
+<button class="btn-lg btn-black-secondary">Button</button>
+<button class="btn-lg btn-dark-cancel">Cancel</button>
+<br>
+<br>
+<pre class="syntax">
+&lt;button class=&quot;btn-lg btn-blue&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-lg btn-white&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-lg btn-cancel&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-lg btn-black-primary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-lg btn-black-secondary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-lg btn-dark-cancel&quot;&gt;Button&lt;/button&gt;</pre>
+
+<br>
+
+<h5> Chips </h5>
+<button class="btn-chip btn-blue"><img src="icons/dashboard-512.png" width="33px"></button>
+<button class="btn-chip btn-white"><img src="icons/template.png" width="33px"></button>
+<button class="btn-chip btn-black-primary"><img src="icons/dashboard-512.png" width="33px"></button>
+<button class="btn-chip btn-black-secondary"><img src="icons/dashboard-512.png" width="33px"></button>
+<br>
+<br>
+
+<pre class="syntax">
+&lt;button class=&quot;btn-chip btn-blue&quot;&gt;&lt;img src=&quot;icons/dashboard-512.png&quot; width=&quot;33px&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-chip btn-white&quot;&gt;&lt;img src=&quot;icons/template.png&quot; width=&quot;33px&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-chip btn-black-primary&quot;&gt;&lt;img src=&quot;icons/dashboard-512.png&quot; width=&quot;33px&quot;&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-chip btn-black-secondary&quot;&gt;&lt;img src=&quot;icons/dashboard-512.png&quot; width=&quot;33px&quot;&gt;&lt;/button&gt;
+</pre>
+
+<br>
+<h5> Loading Buttons</h5>
+<button class="btn btn-blue" id="loading-btn">Click Me</button>
+<br>
+<br>
+<pre class="syntax">&lt;button class=&quot;btn btn-blue&quot; id=&quot;loading-btn&quot;&gt;Button&lt;/button&gt;</pre>
+
+<br>
+<h5>Pushes</h5>
+<button class="btn-push btn-blue"><span>+</span></button>
+<button class="btn-push btn-white"><span>+</span></button>
+<button class="btn-push btn-black-primary"><span>+</span></button>
+<button class="btn-push btn-black-secondary"><span>+</span></button>
+<br>
+<br>
+<pre class="syntax">
+&lt;button class=&quot;btn-push btn-blue&quot;&gt;&lt;span&gt;+&lt;/span&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-push btn-white&quot;&gt;&lt;span&gt;+&lt;/span&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-push btn-black-primary&quot;&gt;&lt;span&gt;+&lt;/span&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-push btn-black-secondary&quot;&gt;&lt;span&gt;+&lt;/span&gt;&lt;/button&gt;
+</pre>
+<br>
+
+
+<h2 class="style-title">Dropdowns</h2>
+<br>
+ <button class="db-btn btn-blue"><span>Selector</span><i class="material-icons">▼</i>
+   <div class="db-container">
+    <ul class="dropdown">
+      <li class="active">
+      <a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
+      <li><a href="#">Item 3</a></li>
+    </ul>
+    </div>
+  </button>
+  <br>
+  <br>
+  
+  <pre class="syntax">
+  &lt;button class=&quot;db-btn btn-blue&quot;&gt;&lt;span&gt;Selector&lt;/span&gt;&lt;i class=&quot;material-icons&quot;&gt;▼&lt;/i&gt;
+   &lt;div class=&quot;db-container&quot;&gt;
+    &lt;ul class=&quot;dropdown&quot;&gt;
+      &lt;li class=&quot;active&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/button&gt;
+</pre>
+
+
+<script>
+
+const loginBtn = document.getElementById("loading-btn");
+
+loginBtn.addEventListener('click', () => {
+  // Show loader on button click
+  loginBtn.classList.add("loading");
+  // Hide loader after success/failure - here it will hide after 2seconds
+  setTimeout(() => loginBtn.classList.remove("loading"), 3000);
+});
+
+</script>
+<style>
+
+body
+{
+    font-family: Helvetica, Sans-Serif;
+    color: #444444;
+    font-size: 9pt;
+    background-color: #FAFAFA;
+}
+
+
+
+.btn {
+    box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+	border-radius:7px;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;	
+}
+
+.btn-chip {
+    box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+	border-radius:7px;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:17px;
+	padding:10px 9px;
+	text-decoration:none;
+	width:55px;	
+}
+
+.btn-push {
+    box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+	border-radius:100%;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	font-size:x-large;
+	padding:10px 9px;
+	text-decoration:none;
+	width:55px;
+	height:55px;	
+}
+
+ .btn-sm {
+    box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+	border-radius:7px;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+    width: 80px;
+    height: 45px;
+    padding:10px 10px;
+	text-decoration:none;	
+	
+}
+
+ .btn-xm {
+    box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+	border-radius:7px;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:x-small;
+    width: 55px;
+    padding:10px 10px;
+	text-decoration:none;	
+}
+
+ .btn-lg {
+    box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+	border-radius:7px;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:17px;
+    width: 294px;
+    padding: 15px 30px;
+	text-decoration:none;	
+}
+
+.btn:hover {
+	background-color:none;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-push:hover {
+	background-color:none;
+}
+
+.btn-push:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-chip:hover {
+	background-color:#003755;
+}
+
+.btn-chip:active {
+	position:relative;
+	top:1px;
+	background-color:#003755;
+}
+
+.btn-sm:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-xm:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-lg:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-chip:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-chip:active {
+	position:relative;
+	top:1px;
+}
+
+/* Loader Buttons */
+
+.btn::after {
+  content: '';
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  margin-top: -25px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border: 0.3em solid transparent;
+  border-right-color: white;
+  border-radius: 50%;
+  animation: button-anim 0.7s linear infinite;
+  opacity: 0;
+  }
+
+@keyframes button-anim {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn.loading {
+  color: transparent;
+}
+
+.btn.loading::after {
+  opacity: 1;
+}
+
+.btn-blue{	
+background-color:#0B6392;
+color:#ffffff;
+}
+
+.btn-cancel{	
+background-color:#ffffff;
+color:#0B6392;
+border: 2px solid #0B6392;
+}
+
+.btn-dark-cancel{	
+background-color:#171616;
+color:#fff;
+border: 2px solid #fff;
+}
+
+.btn-white{	
+background-color:#fff;
+color:#0B6392;
+}
+
+.btn-black-primary{	
+background-color:#171616;
+color:#ffffff;
+}
+
+.btn-black-secondary{	
+background-color:#232323;
+color:#ffffff;
+}
+
+  /* Dropdown */
+.db-btn {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height:54px;
+  /*min-width: 144px;*/
+  border: 0;
+  border-radius: 7px;
+  box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+  box-sizing: border-box;
+  padding: 16px 23px;
+  font-size: 17px;
+  font-weight: none;
+  letter-spacing: 1.2px;
+  text-transform: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.material-icons{
+ font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 9px;
+line-height: 1;
+margin-left:8px;
+letter-spacing: normal;
+text-transform: none;
+display: inline-block;
+white-space: nowrap;
+word-wrap: normal;
+direction: ltr;
+-webkit-font-smoothing: antialiased;
+ }
+ 
+.db-btn:focus .dropdown, .db-btn:active .dropdown {
+  transform: translate(0, 20px);
+  opacity: 1;
+  visibility: visible;
+}
+.db-btn .material-icons {
+  border-radius: 100%;
+  -webkit-animation: ripple 0.6s linear infinite;
+          animation: ripple 0.6s linear infinite;
+}
+.db-btn .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #FFFFFF;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.db-btn .dropdown:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  box-shadow: 2px -2px 6px rgba(0, 0, 0, 0.05);
+  border-top: 6px solid #FFFFFF;
+  border-right: 6px solid #FFFFFF;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid transparent;
+  transform: rotate(-45deg);
+  mix-blend-mode: multiple;
+}
+.db-btn .dropdown li {
+  z-index: 1;
+  position: relative;
+  background: #FFFFFF;
+  padding: 0 20px;
+  color: #666;
+}
+.db-btn .dropdown li.active {
+  color: #5380F7;
+}
+.db-btn .dropdown li:first-child {
+  border-radius: 4px 4px 0 0;
+}
+.db-btn .dropdown li:last-child {
+  border-radius: 0 0 4px 4px;
+}
+.db-btn .dropdown li:last-child a {
+  border-bottom: 0;
+}
+.db-btn .dropdown a {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 16px 0;
+  color: inherit;
+  font-size: 14px;
+  text-decoration: none;
+}
+.db-container {
+  position: absolute;
+  width:15%;
+  margin-top:13px;
+  margin-left:58px;
+}
+
+
+
+
+/***Pills***/
+
+.pill{
+ width:500px;
+ font-size:smaller;
+ font-family: Arial;
+ font-weight: smaller;
+ border-radius: 8em;
+ padding:4px;
+ padding-left:13px;
+ padding-right:13px;
+ }
+ 
+.badge{
+ width:500px;
+ font-size:larger;
+ font-family: Arial;
+ font-weight: bolder;
+ padding:4px;
+ padding-left:13px;
+ padding-right:13px;
+ border-top-left-radius: 7px;
+ border-top-right-radius: 7px;
+ border-bottom-left-radius: 7px;
+ border-bottom-right-radius: 7px;
+ }
+ 
+.pop{
+ width:500px;
+ font-size:smaller;
+ font-family: Arial;
+ font-weight: 100;
+ padding:4px;
+ padding-left:13px;
+ padding-right:13px;
+ border-top-left-radius: 7px;
+ border-top-right-radius: 7px;
+ border-bottom-left-radius: 7px;
+ border-bottom-right-radius: 7px;
+ border:1px solid #9d0008;
+ }
+ 
+ 
+.pop-note{
+  background:#ffd4d4;
+  color: #9D0008; 
+  }
+  
+ 
+.active-stat{
+  background-color:#64d764;
+  color: #009d00;
+  }
+  
+.alert{
+  background-color:#ff6d6d;
+  color: #9D0008;
+  }
+  
+.warning{
+  background-color:#ffb06d;
+  color: #ff7300;
+  }
+  
+.inactive{
+  background-color:#d9d9d9;
+  color: #939393;
+  }
+  
+.confirmed{
+   background-color:#f2cd6e;
+   color:#fff;}
+   
+.play{
+   background-color:#0B6392;
+   color:#fff;}
+   
+.pause{
+   background-color:#021D30;
+   color:#fff;}
+   
+   
+
+/***Modals***/
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  color:black;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: 7px;
+  outline: 0;
+  -webkit-box-shadow: 0 5px 20px rgb(38 38 38 / 50%);
+  box-shadow: 0 5px 20px rgb(38 38 38 / 50%);
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #00000091;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+.modal-header {
+  padding: 15px;
+
+.dark{
+ background-size:#171616;
+ color:#fff;
+ }
+
+}
+.modal-header .close {
+  margin-top: -2px;
+  display: contents;
+  font-size: xx-large;
+  font-weight: 900;
+  color:#0f6292;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+  font-family: arial;
+  font-size: larger;
+  color: #0f6292;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+  font-family: arial;
+  font-weight:100;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+        -webkit-box-shadow: 0 5px 20px rgb(38 38 38 / 50%);
+    box-shadow: 0 5px 20px rgb(38 38 38 / 50%);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+.modal {
+  transition: all 0.5s ease-in-out !important;
+  transition: transform 0.5s ease-out !important;
+}
+
+@keyframes bumpy {
+  0% {
+    transform-style: preserve-3d;
+    transform: perspective(10%) rotateY(-65deg) rotateX(-45deg) translateZ(-200px) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateY(10deg) rotateX(90deg) translateZ(10px) scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0px) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(200%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.5s 0.1s;
+  }
+}
+@keyframes wheel-left {
+  0% {
+    transform: translateX(-200%) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1) rotate(360deg);
+    opacity: 1;
+    transition: all 1s 1s;
+  }
+}
+@keyframes wheel-right {
+  0% {
+    transform: translateX(200%) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1) rotate(360deg);
+    opacity: 1;
+    transition: all 1s 1s;
+  }
+}
+.slide-left {
+  overflow: hidden;
+  animation: 0.75s slide-left both;
+}
+
+.slide-right {
+  overflow: hidden;
+  animation: 0.75s slide-right both;
+}
+
+.bumpy {
+  overflow: hidden;
+  animation: 0.75s bumpy both;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animated Icons */
+
+.pulse {
+  margin: 30px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.pulse .pulser {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.pulse .pulser img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.pulse:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px #ff010e, 
+    -5px -5px 30px 15px #ff010e;
+}
+
+
+.connectx {
+  margin: 30px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.connectx .connectx-connect {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.connectx .connectx-connect img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+/* Cards */
+
+.cards-list {
+ z-index: 0;
+ width: 100%;
+ display: inline-block;
+ margin: auto;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+
+.card {
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #fefefe;
+    height: 163px;
+    width: 417px;
+    overflow: hidden;
+    transition: 375ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    border-radius: 7px;
+    /* to position in middle */  
+    margin: auto;
+    /*position: absolute;*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding:22px;
+    padding-top:3px;
+    box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+}
+
+.cardActive {
+    height: 332px;
+}
+
+.cardActive .nonSharedContent {
+    /* When closing, wait 75ms before fading and fade for longer */
+    transition: 150ms;
+    transition-delay: 75ms;
+    opacity: 1;
+}
+
+.nonSharedContent {
+    transition: 75ms;
+    opacity: 0;
+}
+
+.cardHeader {
+    cursor: pointer;
+    width: 100%;
+    height: 72px;
+    padding-top: 16px;
+ 
+}
+
+.cardHeaderTextContainer {
+    display: inline-block;
+    height: 100%;
+    padding-top: 4px;
+    width: auto;
+}
+
+.cardHeaderTitle {
+    background-color: #2196f2;
+    width: 184px;
+    height: 16px;
+    margin-bottom: 16px;
+}
+
+.cardHeaderSupportingText {
+    background-color: #2196f2;
+    height: 16px;
+    width: 136px;
+}
+
+.cardAvatarContainer {
+    display: inline-block;
+    margin: 0 16px;
+    height: 100%;
+    float: left;
+}
+
+.cardAvatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #2196f2;
+    display: inline-block;
+}
+
+.card-content {
+    width: 200%;
+    padding: 7px;
+    margin-top:62px;
+    margin-left:-13px;
+}
+
+.greySquare {
+    margin: 8px;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff05;
+    border-radius: 2px;
+}
+
+.greyLine {
+    width: 160px;
+    height: 16px;
+    margin: 24px 16px;
+    background-color: #ededed;
+}
+
+.greyLine:first-of-type {
+    width: 220px;
+    margin: 0 16px;
+}
+
+
+/***LEAVE THIS AREA***/
+
+.card-category{
+ color:#999999;
+ font-size: 14px;
+ margin: -1em;
+ margin-left: 1px;
+ margin-top:-2px;
+ font-size: smaller;
+ font-weight: 900;
+ 
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.card-color-white {
+  background-color:#fff;
+  }
+  
+.card-color-black {
+  background-color:#242424;
+
+}
+ 
+ .card-text-white{
+ color: #fff;
+ }
+
+.card-text-black{
+ color: black;
+ }
+ 
+ 
+.title-black {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  margin-top: 18px;
+}
+
+
+.title-blue {
+  color: #0c0c0c4f;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  margin-top: 18px;
+}
+
+.title-white {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  margin-top: 18px;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+hr {
+border-top-width: 1px;
+margin-top: 9px;
+
+hr:card-line {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    margin-top: 9px;
+    padding: 0;
+}
+</style>
+</section>
+
+
+<section class="sg-module" id="pills" style="background-color: #04141e; color:#fff;">
+<h2 class="style-title">Pills, Badges & Pops</h2>
+  <p class="huge-module__paragraph"></p>
+
+
+  <h5>Pills</h5>
+<span class="pill active-stat">Active</span>
+<span class="pill alert">Alert</span>
+<span class="pill warning">Warning</span>
+<span class="pill inactive">Inactive</span>
+<span class="pill confirmed">Confirmed</span>
+<span class="pill play">Play</span>
+<span class="pill pause">Paused</span>
+<br>
+<br>	
+  <pre class="syntax">
+&lt;span class=&quot;pill active-stat&quot;&gt;Active&lt;/span&gt;
+&lt;span class=&quot;pill alert&quot;&gt;Alert&lt;/span&gt;
+&lt;span class=&quot;pill warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;pill inactive&quot;&gt;Inactive&lt;/span&gt;
+&lt;span class=&quot;pill confirmed&quot;&gt;Confirmed&lt;/span&gt;
+&lt;span class=&quot;pill play&quot;&gt;Play&lt;/span&gt;
+&lt;span class=&quot;pill pause&quot;&gt;Paused&lt;/span&gt;
+    </pre>
+<br>
+<br>
+<h5>Badges</h5>
+<span class="badge active-stat">Active</span>
+<span class="badge alert">Alert</span>
+<span class="badge warning">Warning</span>
+<span class="badge inactive">Inactive</span>
+<span class="badge confirmed">Confirmed</span>
+<br>
+<br>
+  <pre class="syntax">
+&lt;span class=&quot;badge active-stat&quot;&gt;Active&lt;/span&gt;
+&lt;span class=&quot;badge alert&quot;&gt;Alert&lt;/span&gt;
+&lt;span class=&quot;badge warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;badge inactive&quot;&gt;Inactive&lt;/span&gt;
+&lt;span class=&quot;badge confirmed&quot;&gt;Confirmed&lt;/span&gt;
+   </pre>
+<br>
+<br>
+<h5>Pops<h5>
+<span class="pop pop-note">Online: <b>3hrs Ago<b></span>
+<span class="pop">Online: <b>3hrs Ago<b></span>
+<br>
+<br>
+  <pre class="syntax">&lt;span class=&quot;pop pop-note&quot;&gt;Online: &lt;b&gt;3hrs Ago&lt;b&gt;&lt;/span&gt;
+&lt;span class=&quot;pop&quot;&gt;Online: &lt;b&gt;3hrs Ago&lt;b&gt;&lt;/span&gt;
+</pre>
+ </section>
+  
+  
+  
+  
+
+<section class="sg-module" id="modals" style="background-color:#04141e; color:#fff">
+<h2 class="style-title">Modals</h2>
+<p class="huge-module__paragraph">Desktop, Tablet & Mobile, choose your side.</p>
+<button class="btn btn-blue" data-toggle="modal" data-target="#defaultModal">Regular</button>
+<button class="btn btn-blue" data-toggle="modal" data-target=".largeModal">Large</button>
+<button class="btn btn-blue" data-toggle="modal" data-target=".smallModal">Small</button>
+<br>
+<br>
+    <pre class="syntax">
+&lt;button class=&quot;btn btn-blue&quot; data-toggle=&quot;modal&quot; data-target=&quot;#defaultModal&quot;&gt;Regular&lt;/button&gt;
+&lt;button class=&quot;btn btn-blue&quot; data-toggle=&quot;modal&quot; data-target=&quot;.largeModal&quot;&gt;Large&lt;/button&gt;
+&lt;button class=&quot;btn btn-blue&quot; data-toggle=&quot;modal&quot; data-target=&quot;.smallModal&quot;&gt;Small&lt;/button&gt;
+    </pre>
+<!--Modals--->
+<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Title</h4>
+              </div>
+              <div class="modal-body">
+                Time is precious. And managing the communications, video and software that comprise your security technology ecosystem can be a time-consuming, challenging task. What if there was a way for you to focus on what matters most, and automate the rest?
+              </div>
+              <div class="modal-footer">
+              <button class="btn-sm btn-cancel" data-dismiss="modal">Close</button>
+                <button class="btn-sm btn-blue" data-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+ <div class="modal fade largeModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Title</h4>
+              </div>
+              <div class="modal-body">
+               Time is precious. And managing the communications, video and software that comprise your security technology ecosystem can be a time-consuming, challenging task. What if there was a way for you to focus on what matters most, and automate the rest?
+              </div>
+              <div class="modal-footer">
+                <button class="btn-sm btn-cancel" data-dismiss="modal">Close</button>
+                <button class="btn-sm btn-blue" data-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade smallModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Title</h4>
+              </div>
+              <div class="modal-body">
+                Time is precious. And managing the communications, video and software that comprise your security technology ecosystem can be a time-consuming, challenging task. What if there was a way for you to focus on what matters most, and automate the rest?
+              </div>
+              <div class="modal-footer">
+                <button class="btn-sm btn-cancel" data-dismiss="modal">Close</button>
+              <button class="btn-sm btn-blue" data-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<!---End Modals--->
+<script>
+var move = "250px";
+
+// Sidebar function
+function openNav(){
+  $('.sidebar').addClass('active').css({"box-shadow": "inset -5px -3px 10px #000"});
+  $(this).addClass('active');
+  $('.boomy').removeClass('hidden');
+  $('.boom').addClass('hidden');
+  $('.tipText-right').addClass('hidden');
+  $(".sidebar").children().css({"opacity": 1, "transition": "all .3s ease-in-out"});  
+  // setTimeout(function() {
+    // $('.profile').delay(300)removeClass('hidden');
+    $('.profile').fadeIn(400, function(){
+      $(this).removeClass('hidden');
+    });
+  //   }, 300);
+ 
+  
+  if ($(window).width() < 512) {
+    $("#main").animate({"margin-left": "60px"}, 10);
+  // $(".boom").animate({"margin-left": move},500);
+  }
+  else{
+    $("#main").animate({"margin-left": move}, 10);
+  }
+
+}
+
+function closeNav() {
+  $('.sidebar').removeClass('active').css({"box-shadow":  "none"});
+  $(this).removeClass('active');
+  $('.boom').removeClass('hidden');
+  $('.boomy').addClass('hidden');
+  $(this).attr( "onClick", "openNav();" );
+  $('.tipText-right').removeClass('hidden');
+  $(".sidebar").children().closest('span').css({"opacity": 0, "transition": "all .3s ease-in-out"});  
+  $('.profile').fadeOut(300, function(){
+    $(this).addClass('hidden');
+  });
+  //prevent increase of margin when clicked multiple times
+  if ($(window).width() < 512) {
+    if($("main").css("margin-left") === "60px")
+      $("#main").animate({"margin-left": "-=" + move}, 10);
+    else
+      $("#main").animate({"margin-left": 0}, 10);
+  }
+  else{
+    if($("main").css("margin-left") === 0)
+      $("#main").animate({"margin-left": "-=" + move}, 10);
+    else
+      $("#main").animate({"margin-left": "60px"}, 10);
+  }
+  
+// $(".boom").animate({"margin-left": "-=" + move}, 500);
+}
+
+
+function Notify(text, style, container) {
+
+	var time = '5000';
+	console.log(container);
+	var $container = $('#' + container + '');
+	console.log($container);
+  var icon = '<i class="fa fa-info-circle "></i>';
+  
+  if( style == 'primary'){
+	  icon = '<i class="fa fa-bookmark "></i>';
+  }
+  
+  if( style == 'info'){
+	  icon = '<i class="fa fa-info-circle "></i>';
+  }
+  
+  if( style == 'success'){
+	  icon = '<i class="fa fa-check-circle "></i>';
+  }
+  
+  if( style == 'warning'){
+	  icon = '<i class="fa fa-exclamation-circle "></i>';
+  }
+  
+  if( style == 'danger'){
+	  icon = '<i class="fa fa-exclamation-triangle "></i>';
+  }
+   
+  if( style == 'default'){
+	  icon = '<i class="fa fa-user "></i>';
+  }
+  
+	if (style == 'undefined' ) {
+	  style = 'warning';
+	  
+	}
+  
+	  var html = $('<div class="alert alert-' + style + '  hide">' + icon +  " " + text + '</div>');
+  
+  
+  console.log(html);
+  
+	$('<a>',{
+		text: '×',
+		class: 'button close',
+		style: 'padding-left: 10px;',
+		href: 'javascript:void(0)',
+		click: function(e){
+			e.preventDefault();
+		// 	close_callback && close_callback();
+			remove_notice();
+		}
+	}).prependTo(html);
+
+	$container.prepend(html);
+	html.removeClass('hide').hide().fadeIn('slow');
+
+	function remove_notice() {
+		html.stop().fadeOut('fast');
+	}
+	
+	var timer =  setInterval(remove_notice, time);
+  
+	$(html).hover(function(){
+		clearInterval(timer);
+	}, function(){
+		timer = setInterval(remove_notice, time);
+	});
+	
+	$(html).on('click', function () {
+		clearInterval(timer);
+		// callback && callback();
+		remove_notice();
+	});
+  
+  
+}
+
+
+
+
+
+$('.primary').on('click', function () {
+  Notify("Welcome Back!",'primary','notifications');			   
+});
+$('.info').on('click', function () {
+  Notify("You have new e-mail!",'info', 'notification2');			   
+});
+$('.success').on('click', function () {
+  Notify("The data has been saved!",'success', 'notification3');
+});
+$('.warning').on('click', function () {
+  Notify("Memory Almost Full! ",'warning', 'notification4');			   
+});
+$('.danger').on('click', function () {
+  Notify("Oh no! There's a virus!",'danger', 'notification5');			   
+});
+$('.default').on('click', function () {
+  Notify("I have no idea, too",'default', 'notification7');			   
+});
+</script>
+</section>
+
+
+
+
+<section class="sg-module" id="cards" style="background-color:#04141e; color:#fff">
+<h2 class="style-title">Cards</h2>
+  <p class="huge-module__paragraph">Choose either traditional cards or list based style</p>
+
+
+<div class="row" style="float:left;">
+  <div class="card-column">
+ <div class="card">
+    <section class="cardHeader">
+      <div class="card-category">ACC</div>
+   <div class="card_title title-black">
+   <p>Alarms</p></div>
+  <div class="card-text-black">
+  Trigger Alarms and Notify Security.
+  </div>
+    <hr class="card-line">
+    </section>
+    <section class="nonSharedContent">
+        <section class="card-content">
+            <span class="greySquare"></span>
+            <span class="greySquare"></span>
+            <span class="greySquare"></span>
+            <span class="greySquare"></span>
+        </section>
+        <div class="greyLine"></div>
+        <div class="greyLine"></div>
+    </section>
+</div>
+</div>
+
+
+
+  <div class="card-column">
+  <div class="card card-color-black">
+    <section class="cardHeader">
+      <div class="card-category">ACC</div>
+   <div class="card_title title-white">
+   <p>Alarms</p></div>
+  <div class="card-text-white">
+  Trigger Alarms and Notify Security.
+  </div>
+    <hr class="card-line">
+    </section>
+    <section class="nonSharedContent">
+        <section class="card-content">
+            <span class="greySquare"></span>
+            <span class="greySquare"></span>
+            <span class="greySquare"></span>
+            <span class="greySquare"></span>
+        </section>
+        <div class="greyLine"></div>
+        <div class="greyLine"></div>
+    </section>
+</div>
+
+  
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <pre class="syntax">
+&lt;div class=&quot;card&quot;&gt;
+    &lt;section class=&quot;cardHeader&quot;&gt;
+      &lt;div class=&quot;card-category&quot;&gt;ACC&lt;/div&gt;
+   &lt;div class=&quot;card_title title-black&quot;&gt;
+   &lt;p&gt;Alarms&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;card-text-black&quot;&gt;
+  Trigger Alarms and Notify Security.
+  &lt;/div&gt;
+    &lt;hr class=&quot;card-line&quot;&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;nonSharedContent&quot;&gt;
+        &lt;section class=&quot;card-content&quot;&gt;
+        &lt;p&gt;Place Content Here&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;div class=&quot;greyLine&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;greyLine&quot;&gt;&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+  </div>
+  <div class="column">
+  <pre class="syntax">
+ &lt;div class=&quot;card card-color-black&quot;&gt;
+    &lt;section class=&quot;cardHeader&quot;&gt;
+      &lt;div class=&quot;card-category&quot;&gt;ACC&lt;/div&gt;
+   &lt;div class=&quot;card_title title-white&quot;&gt;
+   &lt;p&gt;Alarms&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;card-text-white&quot;&gt;
+  Trigger Alarms and Notify Security.
+  &lt;/div&gt;
+    &lt;hr class=&quot;card-line&quot;&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;nonSharedContent&quot;&gt;
+        &lt;section class=&quot;card-content&quot;&gt;
+            &lt;p&gt;Place Content Here&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;div class=&quot;greyLine&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;greyLine&quot;&gt;&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+    </pre>
+  </div>
+</div>
+
+
+</section>
+
+
+<script>
+// Initialize
+const allCardsHeaders = document.getElementsByClassName("cardHeader");
+for(header of allCardsHeaders) {
+    header.addEventListener("click", clickCard);
+}
+
+function clickCard(e) {
+    this.parentElement.classList.toggle('cardActive');
+}
+</script>
+
+
+<!---END Cards-->
+
+<!--Accordion--->
+<!--Colors-->
+<section class="sg-module" id="accordion">
+<h2 class="style-title">Accordion</h2>
+ <p class="huge-module__paragraph">Choose either traditional cards or list based style</p>
+ <br>
+ 
+ <div class="accordion-container collapse">
+  <details>
+    <summary class="title">Title</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">
+     <p>Text Here</p>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary class="title">Title</summary>
+    <div class="details-wrapper">
+      <div class="details-styling">        
+   <p>Text Here</p>
+      </div>
+    </div>
+  </details>
+</div>
+
+
+
+<div class="row">
+  <div class="column">
+    <pre class="syntax">
+ &lt;div class=&quot;accordion-container collapse&quot;&gt;
+  &lt;details&gt;
+    &lt;summary class=&quot;title&quot;&gt;Title&lt;/summary&gt;
+    &lt;div class=&quot;details-wrapper&quot;&gt;
+      &lt;div class=&quot;details-styling&quot;&gt;
+     &lt;p&gt;Text Here&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+  &lt;details&gt;
+    &lt;summary class=&quot;title&quot;&gt;Title&lt;/summary&gt;
+    &lt;div class=&quot;details-wrapper&quot;&gt;
+      &lt;div class=&quot;details-styling&quot;&gt;        
+   &lt;p&gt;Text Here&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+&lt;/div&gt;
+    </pre>
+  </div>
+</div>
+
+<style>
+.collapse-init summary + * {
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+}
+
+/*
+  Closed state. Any CSS transitions work here
+ */
+.collapse-init :not(.panel-active) summary + * {
+  height: 0;
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: bottom center;
+}
+
+.collapse-init summary {
+  list-style: none;
+  color:#000;
+}
+.collapse-init summary::-webkit-details-marker {
+  display: none;
+}
+.collapse-init summary::before {
+  display: none;
+}
+.collapse-init summary {
+  cursor: pointer;
+}
+
+.accordion-container {
+  margin-left:10px;
+  width:410px;
+}
+
+details {
+  background: #fff;
+  border: 1px solid #d6d1e0;
+  border-bottom: 0;
+  list-style: none;
+  box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+}
+details:first-child {
+
+}
+details:last-child {
+  border-bottom: 1px solid #d6d1e0;
+
+}
+
+.details-wrapper{
+ border: 0.2px solid rgb(217, 217, 217);
+
+}
+
+.details-styling{
+padding: 22px;
+color: #000;
+}
+
+summary {
+  display: block;
+  transition: 0.2s;
+  font-weight: 700;
+  font-size:large;
+  padding: 1em;
+}
+summary:focus {
+  
+}
+.collapse-init summary::after {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  content: "";
+  float: right;
+  width: 0.5em;
+  height: 0.5em;
+  margin-top: 0.25em;
+  transform: rotate(45deg);
+  transition: inherit;
+}
+[open] summary {
+  /*background: #0B6392;*/
+  color: #0B6392;
+}
+[open] summary::after {
+  margin-top: 0.5em;
+  transform: rotate(225deg);
+}
+</style>
+
+<script>
+miscPolyfillsForIE();
+
+
+class Collapse {
+  constructor(container, options = {}) {
+    let defaults = {
+      accordion: false,
+      initClass: 'collapse-init',
+      activeClass: 'panel-active',
+      heightClass: 'collapse-reading-height' };
+
+
+    this.settings = Object.assign({}, defaults, options);
+
+    this._container = container;
+    this._panels = container.querySelectorAll("details");
+
+    this.events = {
+      openingPanel: new CustomEvent('openingPanel'),
+      openedPanel: new CustomEvent('openedPanel'),
+      closingPanel: new CustomEvent('closingPanel'),
+      closedPanel: new CustomEvent('closedPanel') };
+
+  }
+
+  // Sets height of panel content
+  _setPanelHeight(panel) {
+    let contents = panel.querySelector("summary + *");
+
+    contents.style.height = contents.scrollHeight + "px";
+  }
+
+  // Removes height of panel content
+  _removePanelHeight(panel) {
+    let contents = panel.querySelector("summary + *");
+
+    contents.style.height = null;
+  }
+
+  //=== Open panel
+  open(panel) {
+    panel.dispatchEvent(this.events.openingPanel);
+
+    panel.open = true;
+  }
+
+  // Add height and active class, this triggers opening animation
+  _afterOpen(panel) {
+    this._setPanelHeight(panel);
+    panel.classList.add(this.settings.activeClass);
+  }
+
+  // Remove height on animation end since it's no longer needed
+  _endOpen(panel) {
+    panel.dispatchEvent(this.events.openedPanel);
+
+    this._removePanelHeight(panel);
+  }
+
+  //=== Close panel, not toggling the actual [open] attr!
+  close(panel) {
+    panel.dispatchEvent(this.events.closingPanel);
+    this._afterClose(panel);
+  }
+
+  // Set height, wait a beat, then remove height to trigger closing animation
+  _afterClose(panel) {
+    this._setPanelHeight(panel);
+
+    setTimeout(() => {
+      panel.classList.remove(this.settings.activeClass);
+      this._removePanelHeight(panel);
+    }, 100); //help, this is buggy and hacky
+  }
+
+  // Actually closes panel once animation finishes
+  _endClose(panel) {
+    panel.dispatchEvent(this.events.closedPanel);
+
+    panel.open = false;
+  }
+
+
+  toggle(panel) {
+    panel.open ? this.close(panel) : this.open(panel);
+  }
+
+  openSinglePanel(panel) {
+    this._panels.forEach(element => {
+      if (panel == element && !panel.open) {
+        this.open(element);
+      } else {
+        this.close(element);
+      }
+    });
+  }
+
+  openAll() {
+    this._panels.forEach(element => {
+      this.open(element);
+    });
+  }
+
+  //=== Closes all panels just in case
+  closeAll() {
+    this._panels.forEach(element => {
+      this.close(element);
+    });
+  }
+
+  // Now put it all together
+  _attachEvents() {
+    this._panels.forEach(panel => {
+      let toggler = panel.querySelector("summary");
+      let contents = panel.querySelector("summary + *");
+
+      // On panel open
+      panel.addEventListener("toggle", e => {
+        let isReadingHeight = panel.classList.contains(this.settings.heightClass);
+
+        if (panel.open && !isReadingHeight) {
+          this._afterOpen(panel);
+        }
+      });
+
+      toggler.addEventListener("click", e => {
+        // If accordion, stop default toggle behavior
+        if (this.settings.accordion) {
+          this.openSinglePanel(panel);
+          e.preventDefault();
+        }
+
+        else if (panel.open) {
+            this.close(panel);
+            e.preventDefault();
+          }
+
+      });
+
+   
+      let propToWatch = '';
+
+      // On panel finishing open/close animation
+      contents.addEventListener("transitionend", e => {
+        // Ignore transitions from child elements
+        if (e.target !== contents) {
+          return;
+        }
+
+        // Set property to watch on first fire
+        if (!propToWatch) propToWatch = e.propertyName;
+
+        // If watched property matches currently animating property
+        if (e.propertyName == propToWatch) {
+          let wasOpened = panel.classList.contains(this.settings.activeClass);
+          wasOpened ? this._endOpen(panel) : this._endClose(panel);
+        }
+      });
+    });
+  }
+
+  init() {
+    // Attach functionality
+    this._attachEvents();
+
+    // If accordion, open the first panel
+    if (this.settings.accordion) {
+      this.openSinglePanel(this._panels[0]);
+    }
+
+    // For styling purposes
+    this._container.classList.add(this.settings.initClass);
+
+    return this;
+  }}
+
+
+let makeMePretty = document.querySelector(".collapse");
+let accordion = new Collapse(makeMePretty, { accordion: true }).init();
+
+// Toggle accordion behavior
+document.querySelector("#accordion-toggle").
+addEventListener("change", function () {
+  this.checked ?
+  accordion.settings.accordion = false :
+  accordion.settings.accordion = true;
+});
+
+// hoisthoistupwego I'm stuck on a machine with IE11
+function miscPolyfillsForIE() {
+  // NodeList.forEach() polyfill
+  // https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach#Browser_Compatibility
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  // Object.assign() polyfill 
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+  "function" != typeof Object.assign && Object.defineProperty(Object, "assign", { value: function (e, t) {"use strict";if (null == e) throw new TypeError("Cannot convert undefined or null to object");for (var n = Object(e), r = 1; r < arguments.length; r++) {var o = arguments[r];if (null != o) for (var c in o) Object.prototype.hasOwnProperty.call(o, c) && (n[c] = o[c]);}return n;}, writable: !0, configurable: !0 });
+
+  // CustomEvent polyfill
+  // https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
+  !function () {if ("function" == typeof window.CustomEvent) return !1;function t(t, e) {e = e || { bubbles: !1, cancelable: !1, detail: void 0 };var n = document.createEvent("CustomEvent");return n.initCustomEvent(t, e.bubbles, e.cancelable, e.detail), n;}t.prototype = window.Event.prototype, window.CustomEvent = t;}();
+}
+</script>
+</section> 
+
+<!--End Accordion--->
+          
+</main>
+    </div>
+    <script src='https://cdn.jsdelivr.net/gh/javan/details-element-polyfill@master/dist/details-element-polyfill.js'>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/97621/smooth-scroll.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/97621/prism.js"></script>
+    <script src='https://unpkg.com/phosphor-icons'></script>
+    <script src="js/scripts.js"></script>
+  
+</body>
+
+</html>

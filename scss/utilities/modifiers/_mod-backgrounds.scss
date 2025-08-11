@@ -1,0 +1,34 @@
+//**  CLASS Modifiers  **//
+
+.bg-trans {
+  @include bg-trans;
+}
+
+.bg-cover {
+  @include bg-cover;
+}
+
+.bg-full {
+  @include bg-full;
+}
+
+.bg-hero {
+  @include bg-hero;
+  
+  // 
+  &-app-user-01 {
+    background-image: url(../images/bg/bg-hero-app-user-01.jpg);
+  }
+
+  &-app-user-02 {
+    background-image: url(../images/bg/bg-hero-app-user-02.jpg);
+  }
+
+  &-user-01 {
+    background-image: url(../images/bg/bg-hero-user-man.jpg);
+  }
+
+  //@include filter-luminosity;
+
+}
+

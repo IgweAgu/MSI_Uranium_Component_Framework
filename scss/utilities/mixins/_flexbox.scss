@@ -1,0 +1,242 @@
+//**  Flex Modifiers  **//
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex-auto {
+  flex: 0 1 auto;
+  min-width: 0; 
+  min-height: 0;
+}
+
+@mixin flex-basis-auto {
+  flex-basis: auto;
+}
+
+@mixin flex-grow-0 {
+  flex-grow: 0;
+}
+
+@mixin flex-grow-1 {
+  flex-grow: 1;
+}
+
+@mixin flex-grow-2 {
+  flex-grow: 2;
+}
+
+@mixin flex-grow-3 {
+  flex-grow: 3;
+}
+
+@mixin flex-grow-4 {
+  flex-grow: 4;
+}
+
+@mixin flex-sm {
+  flex-grow: 0;
+  flex-basis: auto;
+}
+
+@mixin flex-reset {
+  flex-shrink: 0;
+  min-width: 0; 
+  min-height: 0;
+}
+
+// Flex Direction
+
+@mixin flex-d-col {
+  flex-direction: column;
+}
+
+@mixin flex-d-col-rev {
+  flex-direction: column-reverse;
+}
+
+@mixin flex-d-row {
+  flex-direction: row;
+}
+
+@mixin flex-d-row-rev {
+  flex-direction: row-reverse
+}
+
+// Align Items
+
+@mixin ai-start {
+  align-items: flex-start;
+}
+
+@mixin ai-end {
+  align-items: flex-end;
+}
+
+@mixin ai-center {
+  align-items: center;
+}
+
+@mixin ai-stretch {
+  align-items: stretch;
+}
+
+// Align Self
+
+@mixin as-start {
+  align-self: flex-start;
+}
+
+@mixin as-end {
+  align-self: flex-end;
+}
+
+@mixin as-center {
+  align-self: center;
+}
+
+@mixin as-stretch {
+  align-self: stretch;
+}
+
+@mixin as-space-around {
+  align-self: space-around;
+}
+
+@mixin as-space-between {
+  align-self: space-between;
+}
+
+// Flex Justify Content
+
+@mixin jc-start {
+  justify-content: flex-start;
+}
+
+@mixin jc-end {
+  justify-content: flex-end;
+}
+
+@mixin jc-center {
+  justify-content: center;
+}
+
+@mixin jc-stretch {
+  justify-content: stretch;
+}
+
+@mixin jc-around {
+  justify-content: space-around;
+}
+
+@mixin jc-between {
+  justify-content: space-between;
+}
+
+// Flex Order
+
+@mixin flex-lead {
+  flex: 1 0 100%;
+  width: 100%;  
+}
+
+@mixin flex-sm {
+  // > 640
+  @media (min-width: $break-640) {
+    flex-grow: 0;
+    width: auto;
+  }
+}
+
+// Flex Layout
+@mixin flex-layout {
+  > * {
+    flex-basis: 100%;
+    padding-bottom: 1.5em;
+    width: auto;
+  }
+  .media-item {
+    margin-bottom: 0;
+  }
+  // > 640
+  @media (min-width: $break-640) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    > * {
+      float: left; 
+      //flex: 1 1 auto;
+      flex-basis: 50%;
+      flex-grow: 1;
+      padding-top: 1em;
+      padding-right: 1em;
+      padding-bottom: 1em;
+      padding-left: 1em;
+      min-height: 0;
+      min-width: 0;
+      &.flex-sm {
+        flex-basis: auto;
+      }
+    }
+  }
+  // > 667
+  @media (min-width: $break-640) {
+    .flex-lead {
+      flex-basis: 100%;
+    }
+  }
+}
+
+// Media Layout
+@mixin l-media-grid {
+  margin-right: -1em;
+  margin-left: -1em;
+  > * {
+    padding: 1em;
+  }
+  // < 320
+  @media (max-width: 300px) {
+    figcaption {
+      @include sr-only;
+    }
+  }
+  // < 640
+  @media (max-width: $break-640) {
+    > * {
+      flex-basis: 100%;
+    }
+  }
+  // > 800
+  @media (min-width: 50em) {
+    &.col-2 > * {
+      flex-basis: 50%;
+    }
+  }
+  // > 1200
+  @media (min-width: $break-1200) {
+    > * {
+      flex-basis: 33%;
+    }
+  }
+}
+
+@mixin flex-layout-grid {
+  @include flex-layout;
+  > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+@mixin flex-3-col {
+  @media (min-width: $break-900) {
+    @include flex-layout-grid;
+    > * {
+      flex-basis: 11em;
+    }
+  }
+}

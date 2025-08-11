@@ -1,0 +1,188 @@
+@mixin font-scale {
+  font-size: calc( 1rem + (40 - 28) * ( (100vw - 400px) / ( 2000 - 400)));
+}
+
+//** ALIGNMENT (align-left by default) **//
+
+// align right
+@mixin align-right {
+  // > 540
+  @media (min-width: $break-540) {
+    text-align: right;
+    *+*:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// align center
+@mixin align-center {
+  // > 540
+  @media (min-width: $break-540) {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+//** FONT SIZE (em) **//
+
+@mixin text-tiny {
+  font-size: .7em;
+}
+
+@mixin text-sm {
+  font-size: .875em;
+}
+
+@mixin text-base {
+  font-size: 1em;
+}
+
+@mixin text-md {
+  font-size: 1.35em;
+}
+
+@mixin text-lg {
+  font-size: 1.875em;
+}
+
+@mixin text-xl {
+  font-size: 2.25em;
+}
+
+@mixin text-xxl {
+  font-size: 2.75em;
+}
+
+@mixin display-sm {
+  font-size: calc(1vw + 3.875em);
+}
+
+@mixin display-md {
+  font-size: calc(1vw + 5em);
+}
+
+@mixin display-lg {
+  font-size: calc(1vw + 7.75em);
+}
+
+//** FONT SIZE (rem) **//
+
+@mixin text-tiny-r {
+  font-size: .7rem;
+}
+
+@mixin text-sm-r {
+  font-size: .875rem;
+}
+
+@mixin text-base-r {
+  font-size: 1rem;
+}
+
+@mixin text-md-r {
+  font-size: 1.25rem;
+}
+
+@mixin text-lg-r {
+  font-size: 1.875rem;
+}
+
+@mixin text-xl-r {
+  font-size: 2rem;
+}
+
+@mixin text-xl-r {
+  font-size: 2.75rem;
+}
+
+@mixin display-sm-r {
+  font-size: calc(1vw + 3.875rem);
+}
+
+@mixin display-md-r {
+  font-size: calc(1vw + 5rem);
+}
+
+@mixin display-lg-r {
+  font-size: calc(1vw + 7.75em);
+}
+
+//** FONT STYLES **//
+@mixin all-caps {
+  text-transform: uppercase;
+}
+
+@mixin italic {
+  font-style: italic;
+}
+
+@mixin bold {
+  font-weight: 700;
+}
+
+@mixin text-u {
+  text-decoration: underline;
+}
+
+@mixin text-u-none {
+  text-decoration: none;
+}
+
+@mixin text-link {
+  background: none;
+  @include block;
+  @include pb-tiny;
+  @include text-md; 
+  @include text-u-none;
+  line-height: 1.2;
+  text-shadow: none;
+}
+
+//** LIST STYLES **//
+
+@mixin list-unstyled {
+  font-family: $sans-serif;
+  ul {
+    font-family: $sans-serif;
+    @include mb-0;
+    @include pt-pb-1;
+    li:last-child {
+      @include mb-0;
+    }
+  }
+}
+
+@mixin list-clean {
+  list-style-type: none;
+}
+
+@mixin list-nested {
+  @include pt-pb-1;
+  @include pl-3;
+  @include w-100;
+  > li {
+    list-style-type: circle;
+  }
+}
+
+@mixin arrow-list-lg {
+  @include p-0;
+  > li {
+    @include flex;
+    //@include flex-wrap;
+    @include list-clean;
+    &:before {
+      content: "→ ";
+      @include pr-sm;
+    }
+  }
+}
+
+@mixin list-parent {
+  @include flex-wrap;
+}

@@ -1,0 +1,64 @@
+// Images
+
+@mixin circle-mask {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+  max-height: 20rem;
+  max-width: 20rem;
+  figcaption {
+    display: none;
+  }
+  &.mask-outside {
+    shape-outside: circle();
+  }
+  @media (min-width: $break-900) {
+    max-height: 25rem;
+    max-width: 25rem;
+  }
+}
+
+@mixin circle-mask-md {
+  @include circle-mask;
+  max-height: 20rem;
+  max-width: 20rem;
+}
+
+@mixin circle-mask-sm {
+  @include circle-mask;
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+.circle-mask {
+  @include circle-mask;
+  @media (min-width: $break-640) {
+    
+  }
+}
+
+.circle-mask-md {
+  @media (min-width: $break-640) {
+    @include circle-mask-md;
+  }
+}
+
+.circle-mask-sm {
+  @media (min-width: $break-640) {
+    @include circle-mask-sm;
+  }
+}
+
+@mixin rounded-mask {
+  border-radius: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+  img {
+    border-radius: 1rem;
+  }
+}
+
+.rounded-mask {
+  @include rounded-mask;
+}

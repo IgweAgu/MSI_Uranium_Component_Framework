@@ -1,0 +1,68 @@
+$magenta: #ec008c;
+$black: #000;
+$grey-dark: #232525;
+$grey: #808080;
+$blue: #2fbbf9;
+
+.bg-magenta {
+	background-color: $magenta;
+}
+
+.bg-black {
+	background-color: $black;
+}
+
+.bg-grey {
+	background-color: $grey;
+}
+
+.bg-blue {
+	background-color: $blue;
+}
+
+#colors {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    flex-grow: 1;
+    flex-basis: 15em;
+    position: relative;
+    padding: 0;
+    margin-bottom: 0;
+    //width: auto;
+    p {
+      position: absolute;
+      padding: 3px 13px;
+      color: #666;
+      background-color: #fff;
+      font-size: 12px;
+      bottom: 0;
+      left: 0.9375em;
+    }
+    .color {
+      height: 120px;
+      //margin-right: 0.9375em;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @media (min-width: 40.063em) {
+    li {
+      flex-grow: 0;
+    }
+  }
+  @supports (grid-gap: 0) {
+    ul {
+      display: grid;
+      grid-gap: .5rem;
+      grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    }
+    li {
+      width: 100%;
+    }
+  }
+}

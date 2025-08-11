@@ -1,0 +1,60 @@
+// Base
+
+@import url('https://fonts.googleapis.com/css?family=Bevan');
+
+$Bevan: 'Bevan', $sans-serif;
+
+@mixin button-hov-dark {
+  //transition: background .4s ease,
+              //color .4s ease;
+  &:hover,
+  &:focus,
+  &.active {
+    background: #555;
+    box-shadow: none;
+    color: #eee;
+    outline: inset 1px transparent;
+    .icon {
+      fill: #eee;
+    }
+  }
+}
+
+@mixin button-hov-light {
+  transition: background .4s ease,
+              color .4s ease;
+  &:hover,
+  &:focus,
+  &.active {
+    background: #ccc;
+    box-shadow: none;
+    color: #333;
+    outline: inset 1px transparent;
+  }
+}
+
+:root {
+  font-family: $sans-serif;
+}
+
+.bevan { 
+  font-family: $Bevan;
+}
+
+img {
+  max-width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
+  position: relative;
+  top: -.0625em;
+  margin-right: .25rem;
+  margin-left: .25rem;
+  text-align: center;
+  stroke-width: 0;
+}

@@ -1,0 +1,307 @@
+// Display Options
+.show,
+.block {
+  @include block;
+}
+
+.inline {
+  @include inline;
+}
+
+.inline-block {
+  @include inline-block;
+}
+
+.table {
+  @include table;
+}
+
+.table-cell {
+  @include table-cell
+}
+
+.vis-hidden {
+  @include vis-hidden;
+}
+
+.visible {
+  @include visible;
+}
+
+.hidden {
+  @include hidden;
+}
+
+.overflow-h {
+  @include overflow-hidden;
+}
+
+// Postion
+.fixed {
+  @include fixed;
+}
+
+.absolute {
+  @include absolute;
+}
+
+.relative {
+  @include relative;
+}
+
+.static {
+  @include static;
+}
+
+// Floats
+.float-l {
+  @include float-l;
+}
+
+.float-r {
+  @include float-r;
+}
+
+// height
+.h-auto {
+  @include h-auto;
+}
+
+.h-0 {
+  @include h-0;
+}
+
+.h-25 {
+  @include h-25;
+}
+
+.h-50 {
+  @include h-50;
+}
+
+.h-75 {
+  @include h-75;
+}
+
+.h-100 {
+  @include h-100;
+}
+
+.h-100vh {
+  @include h-100vh;
+}
+
+.mh-100vh {
+  @include mh-100vh;
+}
+
+// Width Sizes
+.w-a {
+  @include w-a;
+}
+
+.w-5 {
+  @include w-5;
+}
+
+.w-10 {
+  @include w-10;
+}
+
+.w-15 {
+  @include w-15;
+}
+
+.w-20 {
+  @include w-20;
+}
+
+.w-25 {
+  @include w-25;
+}
+
+.w-30 {
+  @include w-30;
+}
+
+.w-33 {
+  @include w-33;
+}
+
+.w-35 {
+  @include w-35;
+}
+
+.w-40 {
+  @include w-40;
+}
+
+.w-45 {
+  @include w-45;
+}
+
+.w-50 {
+  @include w-50;
+}
+
+.w-55 {
+  @include w-55;
+}
+
+.w-60 {
+  @include w-60;
+}
+
+.w-65 {
+  @include w-65;
+}
+
+.w-70 {
+  @include w-70;
+}
+
+.w-75 {
+  @include w-75;
+}
+
+.w-80 {
+  @include w-80;
+}
+
+.w-85 {
+  @include w-85;
+}
+
+.w-90 {
+  @include w-90;
+}
+
+.w-95 {
+  @include w-95;
+}
+
+.w-100 {
+  @include w-100;
+}
+
+.w-auto {
+  @include w-auto;
+}
+
+// Max-Width Sizes
+.mw-2em {
+  @include mw-2em;
+}
+
+.mw-3em {
+  @include mw-3em;
+}
+
+.mw-4em {
+  @include mw-4em;
+}
+
+.mw-5em {
+  @include mw-5em;
+}
+
+.mw-6em {
+  @include mw-6em;
+}
+
+.mw-7em {
+  @include mw-7em;
+}
+
+.mw-8em {
+  @include mw-8em;
+}
+
+.mw-9em {
+  @include mw-9em;
+}
+
+.mw-10em {
+  @include mw-10em;
+}
+
+.mw-15em {
+  @include mw-15em;
+}
+
+.mw-20em {
+  @include mw-20em;
+}
+
+.mw-25em {
+  @include mw-25em;
+}
+
+.mw-30em {
+  @include mw-30em;
+}
+
+.mw-35em {
+  @include mw-35em;
+}
+
+.mw-40em {
+  @include mw-40em;
+}
+
+.mw-42em {
+  @include mw-42em;
+}
+
+.mw-44em {
+  @include mw-44em;
+}
+
+.mw-48em {
+  @include mw-48em;
+}
+
+.mw-56em {
+  @include mw-56em;
+}
+
+.mw-62em {
+  @include mw-56em;
+}
+
+.mw-100p {
+  @include mw-100p;
+}
+
+//** ALIGNMENT (align-left by default) **//
+// align right
+.align-right {
+  @include align-right;
+}
+
+// align center
+.align-center {
+  @include align-center;
+}
+
+// placement
+
+.rotate-90 {
+  @include rotate-90;
+}
+
+.rotate-neg-90 {
+  @include rotate-neg-90;
+}
+
+.rotate-45 {
+  @include rotate-45;
+}
+
+.rotate-neg-45 {
+  @include rotate-neg-45;
+}
+
+.rotate-180 {
+  @include rotate-180;
+}

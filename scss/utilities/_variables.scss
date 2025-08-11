@@ -1,0 +1,39 @@
+// Media Queries
+
+$break-240: 15em; // 240px
+
+$break-320: 20em; // 320px
+
+$break-375: 23.438em; // 375px
+ 
+$break-480: 30em; // 480px
+
+$break-540: 33.75em; // 540px
+
+$break-640: 40em; // 640px
+
+$break-768: 48em; // 768px
+
+$break-800: 50em; // 800px
+
+$break-900: 56.25em; // 900px 
+
+$break-1000: 62.5em; // 1000px
+
+$break-1200: 75em; // 1200px 
+
+// Default Font Stacks
+
+$sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$sans-serif-narrow: "Roboto Condensed", $sans-serif;
+
+$serif: "Garamond", "Cambria", Georgia, serif;
+
+// Specific Helpers
+
+$wht-text-shadow: 0 1px 0 rgba(white, 0.35);
+
+$blk-text-shadow: 1px 1px 0 rgba(black, 0.15);
+
+$blk-text-shadow-neg: 0 -1px 1px rgba(black, 0.25);

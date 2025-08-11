@@ -1,0 +1,141 @@
+// Sidebar Nav
+
+.sg-sidebar {
+  background-color: #333;
+  color: #eee;
+  height: 0;
+  @include text-sm;
+  @include w-100;
+  &:target,
+  &:not([hidden]) {
+    height: auto;
+    padding-top: 1.375em;
+    padding-bottom: 1.375em;
+    @include pr-pl-2;
+  }
+  @media (min-height: $break-640) and (min-width: $break-640) {
+    .sg-sidebar-nav {
+      position: sticky;
+      top: 5em;        
+    }
+  }
+  @media (min-width: $break-640) {
+    @include h-auto;
+    flex-basis: 0;
+    width: 0;
+    &:target,
+    &:not([hidden]) {
+      //flex-basis: 30rem;
+      //max-width: 15rem;
+      @include pt-5;
+      @include pr-2;
+      @include pb-2;
+      @include pl-2;
+      @include w-100;
+    }
+  }
+}
+
+.sg-sidebar-nav {  
+  margin-bottom: 0;
+  padding-bottom: .25em;
+  & > li {
+    @include flex;
+    @include flex-d-col;
+    @include mb-1-pt5;
+    @include pt-sm;
+    &:first-of-type > .active {
+      margin-top: 0;
+    }
+    &.sg-brand {
+      @include pt-0;
+    }
+  }
+  a {
+    color: currentColor;
+    @include w-100;
+    @include text-u-none;
+  }
+  @media (min-width: $break-640) {
+    @include pb-0;
+  }
+}
+
+// Brand Logo (for demo)
+
+.sg-brand-logo {
+  background-color: #111;
+  color: #fff;
+  fill: currentColor;
+  font-size: initial;
+  line-height: initial;
+  letter-spacing: .05em;
+  @include flex-grow-1;
+  @include inline-block;
+  @include mr-ml-a;
+  @include mb-0;
+  max-width: 8em;
+  @include p-sm;
+  @include pr-tiny;
+  @include text-center;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  @include pseudo-arrow;
+  &::before {
+    border-top: 13px solid #333;
+    border-bottom: 13px solid transparent;
+    border-left: 13px solid transparent;
+    top: 0;
+    right: 0;
+  }
+  &::after {
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid #333;
+    border-right: 13px solid transparent;
+    bottom: 0;
+    left: 0; 
+  }
+  &.invert-color {
+    background-color: #fff;
+    color: #333;
+  }
+}
+
+// Sidebar Nav Toggle
+
+.nav-toggle {
+  @include flex;
+  @include ai-center;
+  @include jc-between;
+  &.active {
+    //margin-top: 1rem;
+    .caret {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// Sub Menu
+
+.sub-menu {
+  @include flex-d-col;
+  @include mb-0;
+  @include ml-0;
+  @include text-sm;
+  > li {
+    @include mb-sm;
+    &:last-child {
+      @include mb-0;
+    }
+  }
+  a {
+    color: #bbb;
+  }
+  &:not([hidden]) {
+    box-shadow: inset 0 1px 0 #666;
+    @include flex;
+    margin-top: .5rem;
+    @include pt-1;
+    @include pr-tiny;
+  }
+}

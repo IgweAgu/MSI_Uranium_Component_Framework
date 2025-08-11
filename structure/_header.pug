@@ -1,0 +1,30 @@
+// header
+.sg-header(role="banner")
+  a#menu-toggle.toggle-button(href="#sg-sidebar" data-text-original="☰" data-text-swap="✕" role="button" aria-label="open-main-menu" aria-expanded="false") ☰
+  .option-select
+    p.mb-0 styleguide - v.1.0
+    .dropdown
+      button#resize-toggle.dropdown-toggle(aria-expanded="false")
+        svg.icon.icon-resize <use xlink:href="#icon-resize"></use>
+      ul.toggle-list(hidden)
+        li
+          button#toggle-sm(aria-label="view-content-in-small-screen-mode")
+            svg.icon.icon-mobile <use xlink:href="#icon-mobile"></use>
+            span(aria-hidden="true") SM
+        li.md
+          button#toggle-md(aria-label="view-content-in-medium-screen-mode")
+            svg.icon.icon-tablet <use xlink:href="#icon-tablet"></use>
+            span(aria-hidden="true") MD
+        li.lg
+          button#toggle-lg(aria-label="view-content-in-large-screen-mode")
+            svg.icon.icon-display <use xlink:href="#icon-display"></use>
+            span(aria-hidden="true") LG
+        //li.xl
+          button#toggle-xl(aria-label="view-content-in-large-screen-mode")
+            svg.icon.icon-display <use xlink:href="#icon-display"></use>
+            span(aria-hidden="true") XL
+        li
+          button#toggle-full.jc-center.active(aria-label="view-content-in-fullscreen-mode")
+            svg.icon.icon-resize-full-screen <use xlink:href="#icon-resize-full-screen"></use>
+            span(aria-hidden="true") XL
+            

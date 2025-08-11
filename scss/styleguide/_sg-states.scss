@@ -1,0 +1,207 @@
+// Menu Toggle Button
+
+.toggle-button {
+  background-color: #ddd;
+  color: #777;
+  @include flex;
+  @include ai-center;
+  font-size: 1.45rem;
+  letter-spacing: .05em;
+  @include pt-pb-sm;
+  padding-right: .75em;
+  padding-left: .75em;
+  @include text-u-none;
+  @include all-caps;
+  @include button-hov-dark;
+}
+
+#menu-toggle {
+  &[aria-expanded="true"] {
+    background-color: #333;
+    color: #eee;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  @media (min-width: $break-640) {
+    &[aria-expanded="true"] {      
+      @include pt-tiny;
+      @include pr-pl-tiny;
+      top: .5em;
+      right: auto;
+      left: -1.75em;
+    }
+  }
+}
+
+// MQ Resize Dropdown
+
+.option-select {
+  @include flex;
+  @include flex-grow-1;
+  @include ai-center;
+  @include jc-between;
+  @include pt-pb-1;
+  @include pr-1;
+  padding-left: 1.5em;
+  @include text-sm;
+  @media (max-width: $break-375) {
+    @include jc-end;
+  }
+}
+
+.dropdown {
+  @include relative;
+  @include p-0;
+  @media (max-width: $break-375) {
+    display: none;
+  }
+}
+
+.dropdown-toggle {  
+  background: none;
+  border-radius: 0;
+  //box-shadow: inset 0 0 0 1px #ddd;
+  @include flex;
+  @include ai-center;
+  @include jc-between;
+  @include relative;
+  @include m-0;
+  @include pt-pb-0;
+  @include pr-pl-0;
+  .icon {
+    fill: #999;
+    font-size: 32px;
+    top: auto;
+    transition: .4s ease;
+  }
+  &:hover,
+  &:focus,
+  &.active {
+    .icon {
+      fill: #444;
+    }
+  }
+}
+
+.caret {
+  @include text-md;
+  &-sm {
+    @include text-base;
+    padding-right: 2px;
+  }
+}
+
+// Resizer
+
+.toggle-list {
+  background-color: #333;
+  @include absolute;
+  @include m-0;
+  @include p-0;
+  top: 36px;
+  right: 0;
+  &:not([hidden]) {
+    @include flex;
+    @include flex-d-col;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  button {
+    @include bg-trans;
+    @include flex;
+    @include ai-center;
+    border: none;
+    box-shadow: none;
+    color: #eee;
+    @include pt-pb-1;
+    @include pr-1;
+    @include pl-sm;
+    white-space: pre;
+    @include w-100;
+    @include button-hov-light;
+  }
+  .icon {
+    @include mr-sm;
+    @include text-md;
+  }
+  > li {
+    @include list-clean;
+    @include mb-0;
+    @media (max-width: $break-540 - .01em) {
+      &.md {   
+        display: none;
+      }
+    }
+    @media (max-width: $break-900 - .01em) {
+      &.lg {
+        display: none;
+      }
+    }
+    // @media (max-width: 77em) {
+    //   &.xl {
+    //     display: none;
+    //   }
+    // }
+    @media (min-width: $break-540) {
+      &:last-child {
+        grid-column: span 2;
+      }
+    }
+    @media (min-width: $break-900) {
+      &:last-child {
+        grid-column: initial;
+      }
+    }
+  }
+}
+
+// screen size marker
+.sg-content-wrap {
+  &.active::after {
+    background: rgba(0,0,0, .75);
+    color: #fff;    
+    display: block;
+    font-size: .75rem;
+    font-family: $sans-serif;
+    line-height: 0;
+    opacity: .5;
+    padding: 1em .5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  @media (min-width: $break-375) {
+    &.active-sm {
+      .sg-module {
+        @include pt-pb-1;
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+      }
+      &::after {
+        content: "SM"; 
+      }
+    }
+    &.active-md::after {
+      content: "MD"
+    }
+    &.active-lg::after {
+      content: "LG"
+    }
+  } 
+}
+
+// code preview
+
+.sg-code-wrap {
+  @include flex;
+  @include flex-d-col;
+  // @include jc-end;
+}
+
+.code-snippet {
+  &.active {
+    margin-top: 1rem;
+  }
+}

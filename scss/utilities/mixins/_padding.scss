@@ -1,0 +1,533 @@
+// Padding Mixins
+
+@mixin p-0 {
+  // > 640
+  @media (min-width: $break-640) {
+    padding: 0; 
+  }
+}
+
+@mixin p-0-important {
+  padding: 0 !important; 
+}
+
+@mixin p-tiny {
+  padding: .313em; 
+}
+
+@mixin p-sm {
+  padding: .625em; 
+}
+
+@mixin p-1 {
+  padding: 1em; 
+}
+
+@mixin p-1-pt5 {
+  padding: 1.5em; 
+}
+
+@mixin p-2 {
+  padding: 2em; 
+}
+
+@mixin p-2-pt5 {
+  padding: 2.5em; 
+}
+
+@mixin p-3 {
+  padding: 3em; 
+}
+
+@mixin p-3-pt5 {
+  padding: 3.5em; 
+}
+
+@mixin p-4 {
+  padding: 4em; 
+}
+
+@mixin p-4-pt5 {
+  padding: 4.5em; 
+}
+
+@mixin p-5 {
+  padding: 5em; 
+}
+
+@mixin p-5-pt5 {
+  padding: 5.5em; 
+}
+
+//  Padding Top & Bottom
+
+@mixin pt-pb-0 {
+  padding-top: 0;
+  padding-bottom: 0;   
+}
+
+@mixin pt-pb-tiny {
+  padding-top: .313em;
+  padding-bottom: .313em;   
+}
+
+@mixin pt-pb-sm {
+  padding-top: .625em;
+  padding-bottom: .625em;   
+}
+
+@mixin pt-pb-1 {
+  padding-top: 1em;
+  padding-bottom: 1em;   
+}
+
+@mixin pt-pb-2 {
+  padding-top: 2em;
+  padding-bottom: 2em;   
+}
+
+@mixin pt-pb-3 {
+  padding-top: 3em;
+  padding-bottom: 3em;   
+}
+
+@mixin pt-pb-4 {
+  padding-top: 4em;
+  padding-bottom: 4em;   
+}
+
+@mixin pt-pb-5 {
+  padding-top: 5em;
+  padding-bottom: 5em;   
+}
+
+// Padding Top
+
+@mixin pt-0 {
+  padding-top: 0; 
+}
+
+@mixin pt-tiny {
+  padding-top: .313em; 
+}
+
+@mixin pt-sm {
+  padding-top: .625em;
+}
+
+@mixin pt-1 {
+  padding-top: 1em;  
+}
+
+@mixin pt-2 {
+  padding-top: 2em;  
+}
+
+@mixin pt-3 {
+  padding-top: 3em;  
+}
+
+@mixin pt-4 {
+  padding-top: 4em;  
+}
+
+@mixin pt-5 {
+  padding-top: 5em;  
+}
+
+// Padding Bottom
+
+@mixin pb-0 {
+  padding-bottom: 0;  
+}
+
+@mixin pb-tiny {
+  padding-bottom: .313em;  
+}
+
+@mixin pb-sm {
+  padding-bottom: .625em; 
+}
+
+@mixin pb-1 {
+  padding-bottom: 1em;  
+}
+
+@mixin pb-2 {
+  padding-bottom: 2em;  
+}
+
+@mixin pb-3 {
+  padding-bottom: 3em;  
+}
+
+@mixin pb-4 {
+  padding-bottom: 4em;  
+}
+
+@mixin pb-5 {
+  padding-bottom: 5em;  
+}
+
+
+// Padding Right & Left
+
+@mixin pr-pl-0 {
+  padding-right: 0;
+  padding-left: 0;  
+}
+
+@mixin pr-pl-tiny {
+  padding-right: .313em;
+  padding-left: .313em;   
+}
+
+@mixin pr-pl-sm {
+  padding-right: .625em;
+  padding-left: .625em;   
+}
+
+@mixin pr-pl-1 {
+  padding-right: 1em;
+  padding-left: 1em;   
+}
+
+@mixin pr-pl-2 {
+  padding-right: 2em;
+  padding-left: 2em;   
+}
+
+@mixin pr-pl-3 {
+  padding-right: 3em;
+  padding-left: 3em;   
+}
+
+@mixin pr-pl-4 {
+  padding-right: 4em;
+  padding-left: 4em;   
+}
+
+
+// Padding Right
+
+@mixin pr-0 {
+  padding-right: 0; 
+}
+
+@mixin pr-tiny {
+  padding-right: .313em;   
+}
+
+@mixin pr-sm {
+  padding-right: .625em; 
+}
+
+@mixin pr-1 {
+  padding-right: 1em;  
+}
+
+@mixin pr-2 {
+  padding-right: 2em;  
+}
+
+@mixin pr-3 {
+  padding-right: 3em;  
+}
+
+@mixin pr-4 {
+  padding-right: 4em;  
+}
+
+
+// Padding Left
+
+@mixin pl-0 {
+  padding-left: 0;  
+}
+
+@mixin pl-tiny {
+  padding-left: .313em;   
+}
+
+@mixin pl-sm {
+  padding-left: .625em;   
+}
+
+@mixin pl-1 {
+  padding-left: 1em;  
+}
+
+@mixin pl-2 {
+  padding-left: 2em;  
+}
+
+@mixin pl-3 {
+  padding-left: 3em;  
+}
+
+@mixin pl-4 {
+  padding-left: 4em;  
+}
+
+// Padding Mixins
+
+@mixin p-0 {
+  padding: 0; 
+}
+
+@mixin p-0-important {
+  padding: 0 !important; 
+}
+
+@mixin p-tiny {
+  padding: .313em; 
+}
+
+@mixin p-sm {
+  padding: .625em; 
+}
+
+@mixin p-1 {
+  padding: 1em; 
+}
+
+@mixin p-1-pt5 {
+  padding: 1.5em; 
+}
+
+@mixin p-2 {
+  padding: 2em; 
+}
+
+@mixin p-2-pt5 {
+  padding: 2.5em; 
+}
+
+@mixin p-3 {
+  padding: 3em; 
+}
+
+@mixin p-3-pt5 {
+  padding: 3.5em; 
+}
+
+@mixin p-4 {
+  padding: 4em; 
+}
+
+@mixin p-4-pt5 {
+  padding: 4.5em; 
+}
+
+@mixin p-5 {
+  padding: 5em; 
+}
+
+@mixin p-5-pt5 {
+  padding: 5.5em; 
+}
+
+//  Padding Top & Bottom
+
+@mixin pt-pb-tiny {
+  padding-top: .313em;
+  padding-bottom: .313em;   
+}
+
+@mixin pt-pb-sm {
+  padding-top: .625em;
+  padding-bottom: .625em;   
+}
+
+@mixin pt-pb-1 {
+  padding-top: 1em;
+  padding-bottom: 1em;   
+}
+
+@mixin pt-pb-2 {
+  padding-top: 2em;
+  padding-bottom: 2em;   
+}
+
+@mixin pt-pb-3 {
+  padding-top: 3em;
+  padding-bottom: 3em;   
+}
+
+@mixin pt-pb-4 {
+  padding-top: 4em;
+  padding-bottom: 4em;   
+}
+
+@mixin pt-pb-5 {
+  padding-top: 5em;
+  padding-bottom: 5em;   
+}
+
+// Padding Top
+
+@mixin pt-0 {
+  padding-top: 0; 
+}
+
+@mixin pt-tiny {
+  padding-top: .313em; 
+}
+
+@mixin pt-sm {
+  padding-top: .625em;
+}
+
+@mixin pt-1 {
+  padding-top: 1em;  
+}
+
+@mixin pt-2 {
+  padding-top: 2em;  
+}
+
+@mixin pt-3 {
+  padding-top: 3em;  
+}
+
+@mixin pt-4 {
+  padding-top: 4em;  
+}
+
+@mixin pt-5 {
+  padding-top: 5em;  
+}
+
+// Padding Bottom
+
+@mixin pb-0 {
+  padding-bottom: 0;  
+}
+
+@mixin pb-tiny {
+  padding-bottom: .313em;  
+}
+
+@mixin pb-sm {
+  padding-bottom: .625em; 
+}
+
+@mixin pb-1 {
+  padding-bottom: 1em;  
+}
+
+@mixin pb-2 {
+  padding-bottom: 2em;  
+}
+
+@mixin pb-3 {
+  padding-bottom: 3em;  
+}
+
+@mixin pb-4 {
+  padding-bottom: 4em;  
+}
+
+@mixin pb-5 {
+  padding-bottom: 5em;  
+}
+
+
+// Padding Right & Left
+
+@mixin pr-pl-0 {
+  padding-right: 0;
+  padding-left: 0;  
+}
+
+@mixin pr-pl-tiny {
+  padding-right: .313em;
+  padding-left: .313em;   
+}
+
+@mixin pr-pl-sm {
+  padding-right: .625em;
+  padding-left: .625em;   
+}
+
+@mixin pr-pl-1 {
+  padding-right: 1em;
+  padding-left: 1em;   
+}
+
+@mixin pr-pl-2 {
+  padding-right: 2em;
+  padding-left: 2em;   
+}
+
+@mixin pr-pl-3 {
+  padding-right: 3em;
+  padding-left: 3em;   
+}
+
+@mixin pr-pl-4 {
+  padding-right: 4em;
+  padding-left: 4em;   
+}
+
+
+// Padding Right
+
+@mixin pr-0 {
+  padding-right: 0; 
+}
+
+@mixin pr-tiny {
+  padding-right: .313em;   
+}
+
+@mixin pr-sm {
+  padding-right: .625em; 
+}
+
+@mixin pr-1 {
+  padding-right: 1em;  
+}
+
+@mixin pr-2 {
+  padding-right: 2em;  
+}
+
+@mixin pr-3 {
+  padding-right: 3em;  
+}
+
+@mixin pr-4 {
+  padding-right: 4em;  
+}
+
+
+// Padding Left
+
+@mixin pl-0 {
+  padding-left: 0;  
+}
+
+@mixin pl-tiny {
+  padding-left: .313em;   
+}
+
+@mixin pl-sm {
+  padding-left: .625em;   
+}
+
+@mixin pl-1 {
+  padding-left: 1em;  
+}
+
+@mixin pl-2 {
+  padding-left: 2em;  
+}
+
+@mixin pl-3 {
+  padding-left: 3em;  
+}
+
+@mixin pl-4 {
+  padding-left: 4em;  
+}

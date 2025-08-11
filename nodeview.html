@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Node editor layout prototype</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+
+
+
+
+   <div id class="canvas">
+   
+   
+ <!--Node --->  
+ 
+   <div class="heartbeat"></div>
+
+      <div class="node node-white node1">
+      <div class="trigger-icon">
+      <div class="vl"></div>
+      <div class="product-name">ACC</div>
+       <div class="node-name">Alarms</div>
+        <div class="node__out">
+           <div class="node__socket node__socket--on"></div>
+        </div>
+      </div>
+      </div>
+    
+      
+      
+      <div class="node node-white node2">
+      <div class="action-icon">
+      <div class="vl"></div>
+      <div class="product-name">ACC</div>
+       <div class="node-name">Notify Security</div>
+        <div class="node__out">
+           <div class="node__socket node__socket--on"></div>
+        </div>
+      </div>
+      </div>
+      
+      
+   
+  
+ <!--Node Canvas --->  
+
+  </div>
+  
+  <style>
+  
+.trigger-activated{
+   background-image:url(icons/trigger_activated.gif);
+   background-size:cover;
+   background-repeat:no-repeat;
+   height:33px;
+   margin-left:6px;
+   
+  
+  }
+  
+.heartbeat
+{
+  float: left;
+  margin: 57px;
+  margin-left:346px;
+  margin-top:123px;
+  width: 20px;
+  height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  background: rgb(253 19 19);
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
+  background-image: url(icons/heartbeat.png);
+  background-size: 14px;
+  background-position-y: 3px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  z-index:9;
+  
+}
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgb(255 30 30 / 7%);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgb(255 30 30 / 7%);
+  }
+}
+
+@keyframes shadow-pulse-big
+{
+  0% {
+    box-shadow: 0 0 0 0px rgb(255 30 30 / 7%);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgb(255 30 30 / 7%);
+  }
+}
+
+
+
+
+
+
+html, body {
+  background: #303030;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+.wrapper__holder {
+  width: 2201px;
+  position: relative;
+  margin: 200px;
+}
+
+.layout {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  pointer-events: none;
+}
+.layout__header, .layout__footer {
+  pointer-events: auto;
+  width: 100%;
+  min-height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 10;
+  transition: opacity 0.15s linear;
+}
+.layout__header:before, .layout__footer:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+.layout__header:hover, .layout__footer:hover {
+  opacity: 1;
+}
+.layout__header:hover .search__input, .layout__footer:hover .search__input {
+  background-color: white;
+}
+.layout__header {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 0;
+}
+.layout__header:before {
+  display: none;
+}
+.layout__footer {
+  top: auto;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layout__footer:before {
+  transform: rotate(180deg);
+}
+.layout__canvas {
+  flex: 1 0;
+  position: relative;
+  overflow: hidden;
+}
+.layout__drawer {
+  flex: 0 0 300px;
+  color: white;
+  background: rgba(0, 0, 0, 0.85);
+  pointer-events: auto;
+}
+
+.canvas {
+  height: 2001px;
+  width: 2001px;
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right, #373737 1px, transparent 1px), linear-gradient(to bottom, #373737 1px, transparent 1px);
+}
+
+.node-white{
+ background-color:#fff;
+ }
+
+.node {
+  position: absolute;
+  width: 220px;
+  height: 70px;
+  border-radius: 5px;
+  /*border: 1px solid #434343;*/
+  border-radius: 10px;
+  color: #303032;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  z-index: 1;
+  box-shadow: 0px 3px 6px 0px #0c0c0c4f;
+}
+.node__in, .node__out {
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.node__in {
+  left: -8px;
+}
+.node__out {
+  right: -8px;
+}
+.node__socket {
+  width: 16px;
+  height: 16px;
+  margin: 1px 0;
+  border-radius: 100%;
+  background: #1e1e1e;
+
+}
+.node__in > .node__socket--on {
+  background: #0B6392;
+}
+.node__out > .node__socket--on {
+  background: #0B6392;
+}
+.node__content {
+  padding: 5px 20px;
+  position: relative;
+  flex: 1 0 0;
+  display: flex;
+  width: 100%;
+  min-height: 60px;
+}
+.node__content:before {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 30px;
+  width: 100%;
+  background-image: linear-gradient(to top, #1e1e1e, rgba(30, 30, 30, 0));
+  z-index: 2;
+}
+.node__holder {
+  display: block;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.node__answer {
+  position: relative;
+  padding: 10px 20px;
+  width: 100%;
+  border-top: 1px solid #434343;
+}
+
+.node.ui-selected {
+  border-color: yellow;
+}
+
+.node.ui-selecting {
+  border-color: red;
+}
+
+.node1 {
+  top: 100px;
+  left: 100px;
+}
+
+.node2 {
+  top: 100px;
+  left: 602px;
+}
+
+.node-name{
+ margin-left: 89px;
+}
+
+.node-desc{
+ font-size:smaller;
+ }
+
+.product-name{
+ font-size:smaller;
+ font-weight: 800;
+ margin-left:89px;
+ color:#999999;
+ }
+
+.trigger-icon{
+background-image: url(icons/trigger.png);
+background-repeat: no-repeat;
+background-size: cover;
+margin-right: 152px;
+height: 50px;
+width: 50px;
+}
+
+.action-icon{
+background-image: url(icons/action.png);
+background-repeat: no-repeat;
+background-size: cover;
+margin-right: 152px;
+height: 50px;
+width: 50px;
+}
+
+.vl{
+ border-left: 1px solid #d9d9d9;
+ height: 50px;
+ position: absolute;
+ left: 50%;
+ margin-left: -43px;
+ top: 12px;
+}
+
+
+  </style>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+
+</body>
+</html>

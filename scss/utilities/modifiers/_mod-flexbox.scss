@@ -1,0 +1,194 @@
+//**  CLASS Modifiers  **//
+
+.flex {
+  @include flex;
+}
+
+.flex-wrap {
+  @include flex-wrap;
+}
+
+.flex-auto {
+  @include flex-auto;
+}
+
+.flex-basis-auto {
+  @include flex-basis-auto;
+}
+
+.flex-grow-0 {
+  @include flex-grow-0;
+}
+
+.flex-grow-1 {
+  @include flex-grow-1;
+}
+
+.flex-grow-2 {
+  @include flex-grow-2;
+}
+
+.flex-grow-3 {
+  @include flex-grow-3;
+}
+
+.flex-grow-4 {
+  @include flex-grow-4;
+}
+
+.flex-sm {
+  @include flex-sm; 
+}
+
+// Flex Direction
+
+.flex-d-col {
+  @include flex-d-col;
+}
+
+.flex-d-col-rev {
+  @include flex-d-col-rev;
+}
+
+.flex-d-row {
+  @include flex-d-row;
+}
+
+.flex-d-row-rev {
+  @include flex-d-row-rev;
+}
+
+// Align Items
+
+.ai-start {
+  @include ai-start;
+}
+
+.ai-end {
+  @include ai-end;
+}
+
+.ai-center {
+  @include ai-center;
+}
+
+.ai-stretch {
+  @include ai-stretch;
+}
+
+// Align Self
+
+.as-start {
+  @include as-start;
+}
+
+.as-end {
+  @include as-end;
+}
+
+.as-center {
+  @include as-center;
+}
+
+.as-stretch {
+  @include as-stretch;
+}
+
+.as-space-around {
+  @include as-space-around;
+}
+
+.as-space-between {
+  @include as-space-between;
+}
+
+// Flex Justify Content
+
+.jc-start {
+  @include jc-start;
+}
+
+.jc-end {
+  @include jc-end;
+}
+
+.jc-center {
+  @include jc-center;
+}
+
+.jc-stretch {
+  @include jc-stretch;
+}
+
+.jc-around {
+  @include jc-around ;
+}
+
+.jc-between {
+  @include jc-between;
+}
+
+.flex-layout {
+  @include flex-layout;
+}
+
+.l-media-grid {
+  @include l-media-grid;
+}
+
+.flex-layout-grid {
+  @include flex-layout-grid;
+}
+
+.flex-3-col {
+  @include flex-3-col;
+}
+
+.flex-1-2-1 {
+  // 540
+  @media (min-width: $break-540) {
+    > *:nth-child(odd) {
+      width: 25%;
+    }
+    >*:nth-child(even) {
+      //width: 50%;   
+    }
+  }
+}
+
+.flex-33 {
+  // 480
+  @media (min-width: $break-375) {
+    > * {
+      //padding: .3em;
+      flex-basis: 50%;
+    }
+  }
+  // 640
+  @media (min-width: $break-640) {
+    > * {
+      //padding: .3em;
+      flex-basis: 33%;
+    }
+  }
+}
+
+.flex-25 {
+  // 540
+  @media (min-width: $break-540) {
+    > * {
+      padding: .3em;
+      flex-basis: 25%;
+    }
+  }
+}
+
+// Flex Order
+
+.flex-lead {
+  @include flex-lead;  
+}
+
+.flex-sm {
+  @include flex-sm;
+}

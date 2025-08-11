@@ -1,0 +1,99 @@
+// background styles
+
+@mixin bg-trans {
+  background: transparent;
+}
+
+@mixin bg-pos-center {
+  background-position: center;
+}
+
+@mixin bg-repeat-no {
+  background-repeat: no-repeat;
+}
+
+@mixin bg-size-cover {
+  background-size: cover;
+}
+
+@mixin bg-cover {
+  @include bg-pos-center;
+  @include bg-repeat-no;
+  @include bg-size-cover;
+}
+
+@mixin bg-full {
+  @include bg-cover;
+  @include flex;
+  @include ai-center;
+  @include as-stretch;
+  @include flex-grow-1;
+  @include pt-pb-5;
+  // > 800px
+  @media (min-width: 50em) {
+   //@include h-50vh;
+  }
+
+}
+
+@mixin bg-hero {
+  
+  @include bg-cover;
+  @include bg-full;
+  @include font-scale;
+  @include h-100vh;
+
+  .container {
+    padding-right: calc(1vw + 2em);
+    padding-left: calc(1vw + 2em);
+    @include mw-48em;
+  }
+
+  .h1, h1 {
+    font-size: 2.25em;
+    //font-size: 4vmax;
+    @include mb-sm;
+  }
+
+  p {
+    @include mw-40em;
+    @include mr-ml-a;
+    @include mb-2;
+    @include text-sm;
+  }
+
+  .btn {
+    @include text-sm;
+  }
+
+  .icon {
+    font-size: 1.25rem;
+  }
+
+  @media (max-height: $break-640) {
+    @include h-auto;
+    padding-top: 7.5em;
+    @include pb-5;
+  }
+
+  // > 800px
+  @media (min-width: 50em) and (min-height: 30em) {
+    @include h-100vh;
+  }
+
+}
+
+@mixin slug-img-bg {
+  background: url("../images/UI/ui-icons/icon-photo.svg") center no-repeat #DDD;
+  background-size: 20%;
+}
+
+@mixin slug-video-bg {
+  background: url("../images/UI/ui-icons/icon-video.svg") center no-repeat #DDD;
+  background-size: 20%;
+}
+
+@mixin slug-code-bg {
+  background: url("../images/UI/ui-icons/icon-codepen-grey.svg") center no-repeat #DDD;
+  background-size: 20%;
+}

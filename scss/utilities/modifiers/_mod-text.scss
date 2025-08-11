@@ -1,0 +1,156 @@
+//** ALIGNMENT (align-left by default) **//
+// align right
+.align-right {
+  @include align-right;
+}
+
+// align center
+.align-center {
+  @include align-center;
+}
+
+.text-center {
+  @include text-center;
+}
+
+//** FONT SIZE (em) **//
+.text-tiny {
+  @include text-tiny;
+}
+
+.text-sm {
+  @include text-sm;
+}
+
+.text-base {
+  @include text-base;
+}
+
+.text-md {
+  @include text-md;
+}
+
+.text-lg {
+  @include text-lg;
+}
+
+.text-xl {
+  @include text-xl;
+}
+
+.display-sm {
+  @include display-sm;
+}
+
+.display-md {
+  @include display-md;
+}
+
+.display-lg {
+  @include display-lg;
+}
+
+//** FONT SIZE (rem) **//
+.text-tiny-r {
+  @include text-tiny-r;
+}
+
+.text-sm-r {
+  @include text-sm-r;
+}
+
+.text-base-r {
+  @include text-base-r;
+}
+
+.text-md-r {
+  @include text-md-r;
+}
+
+.text-lg-r {
+  @include text-lg-r;
+}
+
+.text-xl-r {
+  @include text-xl-r;
+}
+
+.display-sm-r {
+  @include display-sm-r;
+}
+
+.display-md-r {
+  @include display-md-r;
+}
+
+.display-lg-r {
+  @include display-lg-r;
+}
+
+//** FONT STYLES **//
+.all-caps {
+  @include all-caps;
+}
+
+.italic {
+  @include italic;
+}
+
+.bold {
+  @include bold;
+}
+
+.text-u {
+  text-decoration: underline;
+}
+
+.text-u-none {
+  @include text-u-none;
+}
+
+.text-link {
+  @include text-link;
+}
+
+//** LIST STYLES **//
+
+.list-title {
+  @include mb-1;
+ // margin-left: -1rem;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+
+  &.no-bullet {
+    @include list-clean;
+  }
+
+  &.arrow-list-lg {
+    @include arrow-list-lg;
+  }
+
+  &.list-styled {
+    @include arrow-list-lg;
+  }
+
+  &.list-unstyled {
+    @include list-unstyled;
+  }
+
+  ul.list-nested {
+    @include list-nested;
+  }
+
+}
+
+li {
+  @include mb-sm;
+  &:last-child {
+    @include mb-0;
+  }
+}
+
+.list-parent {
+  @include list-parent;
+}

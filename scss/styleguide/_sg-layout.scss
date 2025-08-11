@@ -1,0 +1,108 @@
+// Layout
+
+@mixin container {
+  @include mr-ml-a;
+  @include pr-pl-2;
+  @include w-100;
+}
+
+.container {
+  @include container;
+}
+
+.site-wrap {
+  @include flex;
+  //@include h-100vh;
+  @media (max-width: $break-640) {
+    @include flex-d-col; 
+  }
+}
+
+// Main
+
+.sg-main {
+  background-color: #aaa;
+  @include flex;
+  @include flex-d-col;
+  @include flex-grow-1;
+  //@include relative;
+  z-index: 1;
+  @media (min-width: $break-640) {
+    @include relative;
+  }
+}
+
+// Header
+
+.sg-header {
+  background-color: #eee;
+  //border-bottom: 1px solid #eee;
+  @include flex;
+  @include flex-reset;
+  @include jc-between;
+  justify-self: flex-start;
+  z-index: 1;
+  @media (min-height: $break-640) and (min-width: $break-640) {
+    position: sticky;
+    top: 0; 
+  }
+}
+
+// Styleguide Content
+
+.sg-content {
+  @include flex;
+  @include flex-d-col;
+  @include flex-grow-1;
+  //overflow: auto;
+}
+
+.sg-content-wrap {
+  background-color: #f9f9f9;
+  @include flex;
+  @include flex-d-col;
+  @include flex-grow-1;
+  @include mr-ml-a;
+  @include mw-100p;
+  //padding-bottom: 100vh;
+  @include relative;
+  transition: max-width .4s ease,
+              min-width .4s ease,
+              width .4s ease;
+  @include w-100;
+  > iframe {
+    @include absolute;
+    @include h-100;
+    @include w-100;
+    top: 0;
+  }
+}
+
+.sg-module {
+  border-bottom: 1px solid #ddd;
+  @include pt-pb-2;
+  @include pr-pl-2;
+  @include mb-3;
+  &:last-child {
+    border-bottom: none;
+    @include mb-0;
+  }
+  @media (min-width: $break-480) {
+    @include pb-4;
+    @include pr-pl-4;
+  }
+}
+
+ul.templates-group {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+  > * {
+    padding: 1em 2em;
+    img {
+      filter: drop-shadow(3px 3px 3px rgba(black, .2));
+    }
+  }
+}

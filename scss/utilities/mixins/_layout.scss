@@ -1,0 +1,303 @@
+// Display Options
+@mixin block {
+  display: block;
+}
+
+@mixin inline {
+  display: inline;
+}
+
+@mixin inline-block {
+  display: inline-block;
+}
+
+@mixin table {
+  display: table;
+}
+
+@mixin table-cell {
+  display: table-cell
+}
+
+@mixin vis-hidden {
+  visibility: hidden;
+}
+
+@mixin visible {
+  visibility: visible;
+}
+
+@mixin hidden {
+  display: none !important;
+}
+
+@mixin overflow-hidden {
+  overflow: hidden;
+}
+
+// Postion
+@mixin fixed {
+  position: fixed;
+}
+
+@mixin absolute {
+  position: absolute;
+}
+
+@mixin relative {
+  position: relative;
+}
+
+@mixin static {
+  position: static;
+}
+
+// Floats
+@mixin float-l {
+  float: left;
+}
+
+@mixin float-r {
+  float: right;
+}
+
+@mixin float-none {
+  float: none;
+}
+
+// height
+@mixin h-auto {
+  height: auto;
+}
+
+@mixin h-0 {
+  height: 0;
+}
+
+@mixin h-25 {
+  height: 25%;
+}
+
+@mixin h-50 {
+  height: 50%;
+}
+
+@mixin h-75 {
+  height: 75%;
+}
+
+@mixin h-100 {
+  height: 100%;
+}
+
+@mixin h-50vh {
+  height: 50vh;
+}
+
+@mixin h-100vh {
+  height: 100vh;
+}
+
+@mixin mh-100vh {
+  min-height: 100vh;
+}
+
+// Width Sizes
+@mixin w-a {
+  width: auto;
+}
+
+@mixin w-5 {
+  width: 5%;
+}
+
+@mixin w-10 {
+  width: 10%;
+}
+
+@mixin w-15 {
+  width: 15%;
+}
+
+@mixin w-20 {
+  width: 20%;
+}
+
+@mixin w-25 {
+  width: 25%;
+}
+
+@mixin w-30 {
+  width: 30%;
+}
+
+@mixin w-33 {
+  width: 33%;
+}
+
+@mixin w-35 {
+  width: 35%;
+}
+
+@mixin w-40 {
+  width: 40%;
+}
+
+@mixin w-45 {
+  width: 45%;
+}
+
+@mixin w-50 {
+  width: 50%;
+}
+
+@mixin w-55 {
+  width: 55%;
+}
+
+@mixin w-60 {
+  width: 60%;
+}
+
+@mixin w-65 {
+  width: 65%;
+}
+
+@mixin w-70 {
+  width: 70%;
+}
+
+@mixin w-75 {
+  width: 75%;
+}
+
+@mixin w-80 {
+  width: 80%;
+}
+
+@mixin w-85 {
+  width: 85%;
+}
+
+@mixin w-90 {
+  width: 90%;
+}
+
+@mixin w-95 {
+  width: 95%;
+}
+
+@mixin w-100 {
+  width: 100%;
+}
+
+@mixin w-auto {
+  width: auto;
+}
+
+// Max-Width Sizes
+@mixin mw-2em {
+  max-width: 2em;
+}
+
+@mixin mw-3em {
+  max-width: 3em;
+}
+
+@mixin mw-4em {
+  max-width: 4em;
+}
+
+@mixin mw-5em {
+  max-width: 5em;
+}
+
+@mixin mw-6em {
+  max-width: 6em;
+}
+
+@mixin mw-7em {
+  max-width: 7em;
+}
+
+@mixin mw-8em {
+  max-width: 8em;
+}
+
+@mixin mw-9em {
+  max-width: 9em;
+}
+
+@mixin mw-10em {
+  max-width: 10em;
+}
+
+@mixin mw-15em {
+  max-width: 15em;
+}
+
+@mixin mw-20em {
+  max-width: 20em;
+}
+
+@mixin mw-25em {
+  max-width: 25em;
+}
+
+@mixin mw-30em {
+  max-width: 30em;
+}
+
+@mixin mw-35em {
+  max-width: 35em;
+}
+
+@mixin mw-40em {
+  max-width: 40em;
+}
+
+@mixin mw-42em {
+  max-width: 42em;
+}
+
+@mixin mw-44em {
+  max-width: 44em;
+}
+
+@mixin mw-48em {
+  max-width: 48em;
+}
+
+@mixin mw-56em {
+  max-width: 56.25em;
+}
+
+@mixin mw-62em {
+  max-width: 62em;
+}
+
+@mixin mw-100p {
+  max-width: 100%;
+}
+
+// placement
+
+@mixin rotate-90 {
+  transform: rotate(90deg);
+}
+
+@mixin rotate-neg-90 {
+  transform: rotate(-90deg);
+}
+
+@mixin rotate-45 {
+  transform: rotate(45deg);
+}
+
+@mixin rotate-neg-45 {
+  transform: rotate(-45deg);
+}
+
+@mixin rotate-180 {
+  transform: rotate(180deg);
+}

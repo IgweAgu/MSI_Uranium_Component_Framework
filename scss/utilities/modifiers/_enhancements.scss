@@ -1,0 +1,32 @@
+// skip to main
+
+.skip-link {
+  background-color: $link;
+  color: #FFF;
+  display: flex;
+  @include ai-center;
+  justify-content: center;
+  @include fonts-loaded-KO29;
+  font-size: 2.5rem;
+  line-height: 1;
+  max-height: 0;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: .3s ease;
+  width: 100%;
+  z-index: 1001;
+  @media (min-width: $break-640) {
+    position: absolute;
+  }
+}
+
+a.skip-link:focus {
+  box-shadow: none;
+  color: #FFF;
+  max-height: 100px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  //transition: .3s ease;
+}
